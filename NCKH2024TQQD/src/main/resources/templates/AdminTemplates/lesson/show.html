@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>CODEHUBT_ADMIN</title>
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+    <link th:href="@{/AdminStatic/css/style.css}" rel="stylesheet" />
+    <link th:href="@{/AdminStatic/css/lesson.css}" rel="stylesheet" />
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+</head>
+<body class="sb-nav-fixed">
+
+<!-- Header -->
+<div th:replace="~{AdminTemplates/layout/header :: header}"></div>
+
+<div id="layoutSidenav">
+    <div id="layoutSidenav_nav">
+        <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+            <div class="sb-sidenav-menu">
+
+                <!-- Sidebar -->
+                <div th:replace="~{AdminTemplates/layout/sidebar :: sidebar}"></div>
+            </div>
+            <div class="sb-sidenav-footer">
+                <div class="small">Logged in as:</div>
+                CODEHUBT
+            </div>
+        </nav>
+    </div>
+
+    <div id="layoutSidenav_content">
+        <main>
+            <div class="container-fluid px-4">
+                <h1 class="mt-4">LESSON</h1>
+                <ol class="breadcrumb mb-4">
+                    <li class="breadcrumb-item active">LESSON</li>
+                </ol>
+            </div>
+            <button onclick="showAddlessonFormOnly()" class="btn btn-primary">Create a Lesson</button>
+            <div id="CourseLessonList">
+                <p>Đang tải Câu hỏi </p>
+            </div>
+
+            <div class="form-container" id="lesson_add" style="display: none">
+                <h2>Thêm Bài Học Mới</h2>
+                <form id="lesson-form-add">
+                    <label type="text" class="form-field">Tiêu Đề</label>
+                    <input type="text" name="title" required placeholder="Nhập Tiêu Đề Cho Câu Hỏi" class="form-field">
+
+                    <div id="courseLabel">
+                        <label class="form-field" id="">Khóa Học Đi Cùng</label>
+                        <select name="course" id="Course" class="form-field">
+                            <option value="tong-quat-khoa-hoc-chung">Chọn Khóa Học</option>
+                        </select>
+                    </div>
+
+                    <label type="text" class="form-field">Mô Tả Câu Hỏi</label>
+                    <textarea name="description" placeholder="Nhập Mô Tả Câu Hỏi" class="form-field"></textarea>
+                    <label type="text" class="form-field" > Content</label>
+                    <input name="content" class="form-field">
+
+                    <label class="form-field">Loại Bài Học</label>
+                    <select name="type" class="form-field">
+                        <option name="video">Video</option>
+                        <option name="text">text</option>
+                        <option name="quiz">quiz</option>
+                        <option name="assignment">assignment</option>
+                        <option name="coding">coding</option>
+                    </select>
+
+                    <label class="form-field">Thời Gian</label>
+                    <input name="duration" type="number" id="duration" min="1" class="form-field">
+
+                    <div class="image-upload">
+                        <label for="image">Ảnh:</label>
+                        <input type="file" name="image" id="image" class="custom-file-input" accept="image/*">
+                        <span class="file-name" id="file-name">Chưa có file nào được chọn</span>
+                        <img id="preview" style="display:none; width:100px;">
+                    </div>
+                    <label class="form-field">Thứ Tự Sắp Xếp </label>
+                    <input name="OrderIndex" type="number" id="OrderIndex" min="1" class="form-field">
+
+                    <div class="button-group">
+                        <button type="submit" id="submitlessonadd">SAVE</button>
+                        <button type="button" onclick="cancelAddLesson()">Exit</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <div th:replace="~{AdminTemplates/layout/footer :: footer}"></div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script th:src="@{/AdminStatic/js/scripts.js}"></script>
+<script th:src="@{/AdminStatic/js/lesson.js}"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+<!--<script th:src="@{/AdminStatic/js/chart-area-demo.js}"></script>-->
+<!--<script th:src="@{/AdminStatic/js/chart-bar-demo.js}"></script>-->
+<script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+<script  th:src="@{/AdminStatic/js/datatables-simple-demo.js}"></script>
+</body>
+</html>

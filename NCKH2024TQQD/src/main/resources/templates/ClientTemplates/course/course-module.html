@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CodeHubt</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" th:href="@{/ClientStatic/css/show-course.css}">
+    <link rel="stylesheet" th:href="@{/ClientStatic/css/base.css}">
+    <link rel="stylesheet" th:href="@{/ClientStatic/css/header.css}">
+    <link rel="stylesheet" th:href="@{/ClientStatic/css/footer.css}">
+</head>
+
+<body>
+<!-- Header -->
+<div th:replace="~{ClientTemplates/layout/header :: header}"></div>
+<div class="header-bottom">
+    <h1 class="inner-title">Java cơ bản</h1>
+    <div class="inner-desc">This course covers the basics of Java programming.</div>
+    <div class="inner-rating">
+        <div class="star-rating">
+            <div class="number-rating">5.0</div>
+            <div class="star">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+        </div>
+        <div class="sum-rating">
+            120 đánh giá
+        </div>
+    </div>
+    <div class="inner-dev">
+        <div class="inner-image">
+            <img src="https://th.bing.com/th/id/OIP.jl3dFoX1fcADXwrul0BJLwHaE8?w=306&h=204&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="">
+        </div>
+        <div class="inner-instructorUserName">
+            tambui
+        </div>
+    </div>
+</div>
+<ul class="nav">
+    <li><a href="#section1">Tổng Quan</a></li>
+    <li><a href="#section2">Lộ Trình</a></li>
+    <li><a href="#section3">Khoá Học Liên Quan</a></li>
+</ul>
+<!-- thanh bên trái  -->
+<div class="Referral-bar">
+    <div class="inner-wrap">
+        <div class="inner-image">
+            <img
+                    src="https://cdn-main.28tech.com.vn/media/anh-khoa-hoc/anh_dai_dien_khoa_hoc/l%E1%BA%ADp%20tr%C3%ACnh%20%20h%C6%B0%E1%BB%9Bng%20%C4%91%E1%BB%91i%20t%C6%B0%E1%BB%A3ng%20java.png"
+                    alt=""
+            />
+        </div>
+        <div class="inner-price">
+            <div class="inner-price-new">2,800,000 đ</div>
+            <div class="inner-price-old"><a href="">6,000,000 đ</a></div>
+        </div>
+        <a href=""><div class="button">Đăng Ký khoá học</div></a>
+        <div class="inner-donate">
+            Sự ủng hộ của các bạn là động lực của chúng tôi
+        </div>
+        <div class="inner-qr">
+            <img th:src="@{/ClientStatic/image/maqr.png}" alt="Mã QR">
+        </div>
+    </div>
+</div>
+<!--kết thúc thanh bên trái  -->
+<section id="section1">
+    <div class="container">
+        <div class="inner-wrap">
+            <h3 class="inner-title">course.title</h3>
+            <div class="inner-desc">
+                course.description
+            </div>
+            <input type="checkbox" id="toggle" hidden />
+            <div class="toggle-wrapper">
+                <div class="content">
+                    <p>
+                        <span class="inner-label">Thời lượng</span>:
+                        <span class="inner-value">100 giờ</span>
+                    </p>
+                    <p>
+                        <span class="inner-label">Thời gian học</span>:
+                        <span class="inner-value">1 tháng</span>
+                    </p>
+                    <p>
+                        <span class="inner-label">Hình thức học</span>:
+                        <span class="inner-value">Online qua Zoom</span>
+                    </p>
+                    <p>
+                        <span class="inner-label">Số buổi trên tuần</span>:
+                        <span class="inner-value">3 buổi (2h/buổi)</span>
+                    </p>
+                    <p>
+                        <span class="inner-label">Số lượng bài tập</span>:
+                        <span class="inner-value">150 bài tập</span>
+                    </p>
+                    <p>
+                        <span class="inner-label">Số lượng project</span>:
+                        <span class="inner-value">3</span>
+                    </p>
+                </div>
+                <div class="buttons">
+                    <label for="toggle" class="toggle-btn show-btn">Xem Thêm</label>
+                    <label for="toggle" class="toggle-btn hide-btn">Ẩn bớt</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="section2">
+    <div class="container">
+        <div class="inner-wrap">
+            <h3 class="inner-title">
+                Lộ trình khóa học
+            </h3>
+            <div class="accordion" id="accordionExample">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <div class="post-name">
+                                    Phần 1:Kiểu Dữ Liệu,Vòng Lặp,Hàm
+                                </div>
+                            </button>
+                        </h2>
+                    </div>
+
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <div class="inner-box">
+                                <div class="inner-logo">
+                                    <i class="fa-regular fa-circle-play"></i>
+                                </div>
+                                <div class="inner-title-lesson">
+                                    Bài 1:Kiểu dữ liệu toán tử cấu trúc rẽ nhánh
+                                </div>
+                            </div>
+                            <p>
+                    <span class="lesson-details">
+                      -Cài Đặt công cụ lập trình
+                    </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Collapsible Group Item #2
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <div class="inner-box">
+                                <div class="inner-logo">
+                                    <i class="fa-regular fa-circle-play"></i>
+                                </div>
+                                <div class="inner-title-lesson">
+                                    Bài 1:Kiểu dữ liệu toán tử cấu trúc rẽ nhánh
+                                </div>
+                            </div>
+                            <p>
+                    <span class="lesson-details">
+                      -Cài Đặt công cụ lập trình
+                    </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Collapsible Group Item #3
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <div class="inner-box">
+                                <div class="inner-logo">
+                                    <i class="fa-regular fa-circle-play"></i>
+                                </div>
+                                <div class="inner-title-lesson">
+                                    Bài 1:Kiểu dữ liệu toán tử cấu trúc rẽ nhánh
+                                </div>
+                            </div>
+                            <p>
+                    <span class="lesson-details">
+                      -Cài Đặt công cụ lập trình
+                    </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="section3">
+    <div class="section-two">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="box-head">
+                        <div class="inner-title">Khóa Học Tại HUBT</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-4 col-md-4 col-sm-6 col-12">
+                    <div class="course-card">
+                        <div class="inner-image">
+                            <a href=""
+                            ><img
+                                    src="https://cdn-main.28tech.com.vn/thumbs/anh-khoa-hoc/anh_dai_dien_khoa_hoc/new/c%C6%A1%20s%E1%BB%9F%20d%E1%BB%AF%20li%E1%BB%87u%20v%C3%A0%20sql_thumb_500.png"
+                                    alt=""
+                            /></a>
+                        </div>
+                        <div class="inner-content">
+                            <div class="inner-assess">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <p>(120 Đánh Giá)</p>
+                            </div>
+                            <div class="inner-title">Cơ Sở Dữ Liệu Và SQL</div>
+                            <div class="inner-info">
+                                <img
+                                        src="https://th.bing.com/th/id/OIP.x0GBD5wzzx3MV8mdcuCojwHaKV?w=211&h=295&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"
+                                        alt=""
+                                />
+                                <div class="inner-owner">Đội Ngũ HUBT</div>
+                            </div>
+                            <div class="inner-price">
+                                <div class="price-new">2,400,000<span>đ</span></div>
+                                <div class="price-old">6,000,000<span>đ</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 col-sm-6 col-12">
+                    <div class="course-card">
+                        <div class="inner-image">
+                            <a href=""
+                            ><img
+                                    src="https://cdn-main.28tech.com.vn/thumbs/anh-khoa-hoc/anh_dai_dien_khoa_hoc/new/c%C6%A1%20s%E1%BB%9F%20d%E1%BB%AF%20li%E1%BB%87u%20v%C3%A0%20sql_thumb_500.png"
+                                    alt=""
+                            /></a>
+                        </div>
+                        <div class="inner-content">
+                            <div class="inner-assess">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <p>(120 Đánh Giá)</p>
+                            </div>
+                            <div class="inner-title">Cơ Sở Dữ Liệu Và SQL</div>
+                            <div class="inner-info">
+                                <img
+                                        src="https://th.bing.com/th/id/OIP.x0GBD5wzzx3MV8mdcuCojwHaKV?w=211&h=295&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"
+                                        alt=""
+                                />
+                                <div class="inner-owner">Đội Ngũ HUBT</div>
+                            </div>
+                            <div class="inner-price">
+                                <div class="price-new">2,400,000<span>đ</span></div>
+                                <div class="price-old">6,000,000<span>đ</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 col-sm-6 col-12">
+                    <div class="course-card">
+                        <div class="inner-image">
+                            <a href=""
+                            ><img
+                                    src="https://cdn-main.28tech.com.vn/thumbs/anh-khoa-hoc/anh_dai_dien_khoa_hoc/new/c%C6%A1%20s%E1%BB%9F%20d%E1%BB%AF%20li%E1%BB%87u%20v%C3%A0%20sql_thumb_500.png"
+                                    alt=""
+                            /></a>
+                        </div>
+                        <div class="inner-content">
+                            <div class="inner-assess">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <p>(120 Đánh Giá)</p>
+                            </div>
+                            <div class="inner-title">Cơ Sở Dữ Liệu Và SQL</div>
+                            <div class="inner-info">
+                                <img
+                                        src="https://th.bing.com/th/id/OIP.x0GBD5wzzx3MV8mdcuCojwHaKV?w=211&h=295&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"
+                                        alt=""
+                                />
+                                <div class="inner-owner">Đội Ngũ HUBT</div>
+                            </div>
+                            <div class="inner-price">
+                                <div class="price-new">2,400,000<span>đ</span></div>
+                                <div class="price-old">6,000,000<span>đ</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 col-sm-6 col-12">
+                    <div class="course-card">
+                        <div class="inner-image">
+                            <a href=""
+                            ><img
+                                    src="https://cdn-main.28tech.com.vn/thumbs/anh-khoa-hoc/anh_dai_dien_khoa_hoc/new/c%C6%A1%20s%E1%BB%9F%20d%E1%BB%AF%20li%E1%BB%87u%20v%C3%A0%20sql_thumb_500.png"
+                                    alt=""
+                            /></a>
+                        </div>
+                        <div class="inner-content">
+                            <div class="inner-assess">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <p>(120 Đánh Giá)</p>
+                            </div>
+                            <div class="inner-title">Cơ Sở Dữ Liệu Và SQL</div>
+                            <div class="inner-info">
+                                <img
+                                        src="https://th.bing.com/th/id/OIP.x0GBD5wzzx3MV8mdcuCojwHaKV?w=211&h=295&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"
+                                        alt=""
+                                />
+                                <div class="inner-owner">Đội Ngũ HUBT</div>
+                            </div>
+                            <div class="inner-price">
+                                <div class="price-new">2,400,000<span>đ</span></div>
+                                <div class="price-old">6,000,000<span>đ</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--footer-->
+<div th:replace="~{ClientTemplates/layout/footer :: footer}"></div>
+<!--<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>-->
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>-->
+<!--<script th:src="@{/ClientStatic/js/script.js}"></script>-->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

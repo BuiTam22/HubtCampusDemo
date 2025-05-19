@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>CODEHUBT_ADMIN</title>
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+    <link th:href="@{/AdminStatic/css/style.css}" rel="stylesheet" />
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+</head>
+<body class="sb-nav-fixed">
+
+<!-- Header -->
+<div th:replace="AdminTemplates/layout/header :: header"></div>
+
+<div id="layoutSidenav">
+    <div id="layoutSidenav_nav">
+        <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+            <div class="sb-sidenav-menu">
+
+                <!-- Sidebar -->
+                <div th:replace="AdminTemplates/layout/sidebar :: sidebar"></div>
+            </div>
+            <div class="sb-sidenav-footer">
+                <div class="small">Logged in as:</div>
+                CODEHUBT
+            </div>
+        </nav>
+    </div>
+
+    <div id="layoutSidenav_content">
+        <main>
+            <div class="container-fluid px-4">
+                <h1 class="mt-4">Role</h1>
+                <ol class="breadcrumb mb-4">
+                    <li class="breadcrumb-item active">Role</li>
+                </ol>
+            </div>
+
+            <h2>Danh sách quyền theo vai trò</h2>
+
+            <div class="container mt-5">
+
+                <div class="d-flex justify-content-between mb-3 ">
+                    <h3>Table ROLE </h3>
+                    <button onclick="showAddRoleFormOnly()" class="btn btn-primary">Create a Role</button>
+                </div>
+                <hr/>
+                <div id="rolePermissionTable" style="display: block;" >
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                        <tr>
+                            <th>RoleName</th>
+                            <th>Pesmissions</th>
+                            <th>Hành Động</th>
+                        </tr>
+                        </thead>
+                        <tbody id="permissionTableBody">
+
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <div id="RoleAddForm" style="display: none; margin-top: 20px;">
+                    <h3>Thêm người dùng</h3>
+                    <form id="addRoleForm">
+                        <label>Quyền:
+                            <select name="roleName">
+                                <option value="ADMIN">ADMIN</option>
+                                <option value="STUDENT">STUDENT</option>
+                                <option value="TEACHER">TEACHER</option>
+                            </select>
+                        </label>
+                        <label> PermissionName
+                            <input type="text" name="permissionName">
+                        </label>
+
+                        <div class="button-group">
+                            <button type="button" onclick="showRoleList()">Đóng</button>
+                            <button type="submit">Thêm Người Dùng</button>
+                        </div>
+                    </form>
+                </div>
+
+
+
+
+            </div>
+
+        </main>
+
+        <!-- Footer -->
+        <div th:replace="AdminTemplates/layout/footer :: footer"></div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script th:src="@{/AdminStatic/js/scripts.js}"></script>
+<script th:src="@{/AdminStatic/js/Role.js}"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+<!--<script th:src="@{/AdminStatic/js/chart-area-demo.js}"></script>-->
+<!--<script th:src="@{/AdminStatic/js/chart-bar-demo.js}"></script>-->
+<script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+<script  th:src="@{/AdminStatic/js/datatables-simple-demo.js}"></script>
+</body>
+</html>

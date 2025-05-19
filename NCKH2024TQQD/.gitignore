@@ -1,0 +1,49 @@
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
+# Không commit file cấu hình chứa thông tin nhạy cảm
+application.properties
+application.yml
+application-dev.properties
+application-prod.properties
+.env
+
+# Nếu dùng Docker hoặc Kubernetes
+docker-compose.override.yml
+secrets/
+
+# Nếu có chứa thông tin nhạy cảm trong logs
+logs/
+*.log
+

@@ -1,0 +1,253 @@
+#CourseLessonList {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#CourseLessonList p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60px;
+    margin: 0;
+    font-size: 18px;
+    color: #555;
+    position: relative;
+}
+
+/* Error message styling */
+#CourseLessonList p:contains("Lỗi"),
+#CourseLessonList p:contains("Không có câu hỏi") {
+    color: #d93025;
+    font-weight: 500;
+}
+
+/* Loading animation */
+#CourseLessonList p:contains("Đang tải"):after {
+    content: "...";
+    position: relative;
+    display: inline-block;
+    animation: loading-dots 1.5s infinite;
+    margin-left: 5px;
+}
+
+@keyframes loading-dots {
+    0%, 20% {
+        content: ".";
+    }
+    40% {
+        content: "..";
+    }
+    60%, 100% {
+        content: "...";
+    }
+}
+
+/* Table styling */
+#CourseLessonList table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+#CourseLessonList thead {
+    background-color: #4285f4;
+    color: white;
+}
+
+#CourseLessonList th {
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+#CourseLessonList tbody tr {
+    border-bottom: 1px solid #dddddd;
+    transition: background-color 0.3s;
+}
+
+#CourseLessonList tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+#CourseLessonList tbody tr:hover {
+    background-color: #e8f0fe;
+}
+
+#CourseLessonList td {
+    padding: 12px 15px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Column-specific styling */
+#CourseLessonList td:nth-child(1) {
+    font-weight: 600;
+    color: #4285f4;
+}
+
+#CourseLessonList td:nth-child(4) {
+    /* Type column styling */
+    position: relative;
+}
+
+#CourseLessonList td:nth-child(4)::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 8px;
+    background-color: #4285f4;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #CourseLessonList {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    #CourseLessonList th,
+    #CourseLessonList td {
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+}
+
+
+/*form show */
+
+/* Form Container Styling */
+.form-container {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#lesson-form-add {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Form Fields */
+.form-field {
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+/* Labels */
+#lesson-form-add label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Inputs, Selects, and Textareas */
+#lesson-form-add input,
+#lesson-form-add select,
+#lesson-form-add textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 15px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#lesson-form-add input:focus,
+#lesson-form-add select:focus,
+#lesson-form-add textarea:focus {
+    border-color: #4285f4;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(66, 133, 244, 0.2);
+}
+
+/* Textarea */
+#lesson-form-add textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Select with specific styling */
+#lesson-form-add select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+    padding-right: 35px;
+}
+
+/* Course selector specific styling */
+#courseLabel {
+    margin-bottom: 15px;
+}
+
+/* Button Styling */
+#lesson-form-add button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: all 0.2s ease;
+}
+
+#submitlessonadd {
+    background-color: #4285f4;
+    color: white;
+    margin-right: 10px;
+}
+
+#submitlessonadd:hover {
+    background-color: #3367d6;
+}
+
+#lesson-form-add button:last-child {
+    background-color: #f1f3f4;
+    color: #333;
+}
+
+#lesson-form-add button:last-child:hover {
+    background-color: #e8eaed;
+}
+
+/* Duration input */
+#duration {
+    max-width: 150px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    #lesson-form-add input,
+    #lesson-form-add select,
+    #lesson-form-add textarea {
+        padding: 10px;
+    }
+
+    #lesson-form-add button {
+        padding: 10px 15px;
+    }
+}

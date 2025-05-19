@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Create Contest</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" th:href="@{/ClientStatic/css/base.css}" />
+    <link rel="stylesheet" th:href="@{/ClientStatic/css/footer.css}" />
+    <link rel="stylesheet" th:href="@{/ClientStatic/css/header.css}" />
+    <link rel="stylesheet" th:href="@{/ClientStatic/css/create-contest.css}" />
+<!--    <link rel="stylesheet" th:href="@{/ClientStatic/css/contest.css}" />-->
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <div th:replace="~{ClientTemplates/layout/header :: header}"></div>
+      <div class="section-one">
+        <div class="container">
+          <div class="inner-title">Tạo bài học</div>
+          <div class="inner-desc">
+            Đây là trang tạo bài học/cuộc thi trên nền tảng CodeHubt. Bạn hãy điền đầy đủ các trường ở dưới đây
+            để tạo bài học/cuộc thi của riêng mình
+          </div>
+        </div>
+      </div>
+      <div class="section-two">
+        <div class="container">
+          <div class="inner-main">
+            <form action="">
+              <div class="inner-content">
+                <label for="">Tiêu đề</label>
+                <input type="text" id="title" name="title"/>
+              </div>
+              <div class="inner-content">
+                <label for="">Mô Tả</label>
+                <input type="text" id="desc" name="desc"/>
+              </div>
+              <div class="inner-content">
+                <label for="">Chọn Ảnh</label>
+                <input type="file" id="file" name="file"/>
+              </div>
+              <div class="inner-content">
+                <label for="duration">Thời gian làm bài</label>
+                <input type="text" id="duration" name="duration" />
+              </div>
+              <div class="inner-content">
+                <label for="">Dạng Bài</label>
+                <select id="contest-type">
+                  <option>coding</option>
+                  <option>Tự Luận</option>
+                </select>
+              </div>
+              <div class="inner-check" id="contest-check">
+                <div class="inner-tick">
+                  <input type="radio" name="option" value="Lesson" id="option-lesson" />
+                  <label for="option-lesson" class="tick">Bài Tập</label>
+                </div>
+                <div class="inner-tick">
+                  <input type="radio" name="option" value="Contest" id="option-contest" />
+                  <label for="option-contest" class="tick">Cuộc thi</label>
+                </div>
+              </div>
+
+              <div class="inner-content">
+                <label for="">Thời gian bắt đầu</label>
+                <input type="date" id="start-date" />
+                <label for="" class="at">at</label>
+                <input type="time" id="start-time" />
+                <label for="" class="itc">ITC</label>
+              </div>
+              <div class="inner-content">
+                <label for="">Thời gian kết thúc</label>
+                <input type="date" id="end-date" />
+                <label for="" class="at">at</label>
+                <input type="time" id="end-time" />
+                <label for="" class="itc">ITC</label>
+              </div>
+              <!-- Chỗ hiển thị cảnh báo -->
+              <div id="time-warning" class="text-danger mt-1">
+                ⛔ Thời gian kết thúc phải sau thời gian bắt đầu
+              </div>
+            </form>
+          </div>
+          <div class="inner-button">
+            <button id="get-started-btn" type="submit" disabled>Tạo bài học</button>
+          </div>
+        </div>
+      </div>
+      <div th:replace="~{ClientTemplates/layout/footer :: footer}"></div>
+    </div>
+    <script th:src="@{/ClientStatic/js/handle-get-started-contest.js}">></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+
+    <script th:src="@{/ClientStatic/js/script.js}"></script>
+  </body>
+</html>

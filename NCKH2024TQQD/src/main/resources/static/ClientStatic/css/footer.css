@@ -1,0 +1,32 @@
+
+.footer {
+    display: flex;
+    background: #1e1e1e;
+    color: white;
+    padding: 15px 30px;
+    margin-top: auto;
+    justify-content: space-between;
+}
+
+.footer-links {
+    display: flex;
+}
+.footer-links .item{
+    margin: 0 10px;
+}
+.footer-links .footer-link{
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 0 10px;
+}
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Chiều cao tối thiểu bằng chiều cao của màn hình */
+}
+
+/* Phần nội dung chiếm toàn bộ không gian còn lại */
+.content-wrapper {
+    flex: 1;
+}

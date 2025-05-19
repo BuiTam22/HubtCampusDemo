@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Contest</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" th:href="@{/ClientStatic/css/base.css}" />
+    <link rel="stylesheet" th:href="@{/ClientStatic/css/footer.css}" />
+    <link rel="stylesheet" th:href="@{/ClientStatic/css/header.css}" />
+<!--    <link rel="stylesheet" th:href="@{/ClientStatic/css/home.css}" />-->
+    <link rel="stylesheet" th:href="@{/ClientStatic/css/contest.css}" />
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <div th:replace="~{ClientTemplates/layout/header :: header}"></div>
+      <div class="section-one">
+        <div class="container-fluid px-5">
+          <img
+                  src="https://s3-sgn09.fptcloud.com/codelearnstorage/files/thumbnails/Vong_2_Chay_%C4%91a_THCS_72ff6ad151a44ad2804b2d29ee0af3ee.jpg"
+                  alt=""
+          />
+<!--          <div class="inner-box">-->
+<!--            <p class="inner-title">-->
+<!--              Đăng Ký: <span class="Registration-number">1170</span>-->
+<!--            </p>-->
+<!--            <div class="end-time">-->
+<!--              <p>Đã Kết Thúc 23/02/2025</p>-->
+<!--            </div>-->
+<!--          </div>-->
+        </div>
+      </div>
+      <div class="section-two">
+        <div class="container-fluid px-5">
+          <div class="inner-classify">
+            <ul>
+              <li><a href="/contest">Coding</a></li>
+              <li><a href="/contest/type-essay">Tự luận</a></li>
+            </ul>
+          </div>
+          <div class="inner-search">
+            <input type="text" placeholder="Tên Cuộc Thi" />
+          </div>
+        </div>
+      </div>
+      <div class="section-three">
+        <div class="container-fluid px-5">
+          <div id="contest-list" class="row">
+            <div class="col-12 mb-4" th:each="contest : ${contests}">
+              <a th:href="${contest.type == 'essay'} ? @{/contest/type-essay/{slug}(slug=${contest.slug})} : @{/contest/{slug}(slug=${contest.slug})}">
+                  <div class="inner-box">
+                  <div class="inner-left">
+                    <div class="inner-main-content">
+                      <div class="inner-image">
+                        <img
+                                th:src="${contest.image != null} ? ${contest.image} : 'https://via.placeholder.com/300x200.png?text=No+Image'"
+                                alt="Contest Image"
+                        />
+                      </div>
+                      <div class="inner-content">
+                        <h1 class="inner-title" th:text="${contest.title}">Tiêu đề</h1>
+                        <div class="inner-desc" th:text="${contest.description}">Mô tả</div>
+                        <div class="inner-person">
+                          <div class="inner-user">
+                            <img
+                                    src="https://th.bing.com/th/id/R.c741810f9c33cf1dcc57c99d72e0a88f?rik=cpqlbe4biPOuAA&riu=http%3a%2f%2fwww.freelogovectors.net%2fwp-content%2fuploads%2f2018%2f03%2freal_madrid_cub_de_futbol-logo.png&ehk=0leBxEk7hblAGXb64NVnUz83tfO1n%2bVtT9C3rBadqUM%3d&risl=&pid=ImgRaw&r=0"
+                                    alt=""
+                            />
+                            <div class="inner-name">Manh_Nguyen</div>
+                          </div>
+                          <div class="inner-Creator">
+                            <img
+                                    src="https://th.bing.com/th/id/R.c741810f9c33cf1dcc57c99d72e0a88f?rik=cpqlbe4biPOuAA&riu=http%3a%2f%2fwww.freelogovectors.net%2fwp-content%2fuploads%2f2018%2f03%2freal_madrid_cub_de_futbol-logo.png&ehk=0leBxEk7hblAGXb64NVnUz83tfO1n%2bVtT9C3rBadqUM%3d&risl=&pid=ImgRaw&r=0"
+                                    alt=""
+                            />
+                            <div class="inner-name">Tam_Bui</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="inner-right">
+<!--                    <div class="inner-Participants">-->
+<!--                      <i class="fa-solid fa-users"></i>-->
+<!--                      <p><span class="number-user">117</span> Đã Tham Gia</p>-->
+<!--                    </div>-->
+                    <div class="inner-Completion-time">
+                      <i class="fa-regular fa-hourglass-half"></i>
+                      <p>
+                        Bắt đầu:
+                        <span class="time" th:text="${#temporals.format(contest.contestStartTime, 'HH:mm dd/MM/yyyy')}">
+              23/12/2025
+            </span>
+                      </p>
+                      <p>
+                        Kết Thúc:
+                        <span class="time" th:text="${#temporals.format(contest.contestEndTime, 'HH:mm dd/MM/yyyy')}">
+              23/12/2025
+            </span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </div>
+        <nav>
+          <ul id="pagination" class="pagination justify-content-center mt-4"></ul>
+        </nav>
+      </div>
+      <div th:replace="~{ClientTemplates/layout/footer :: footer}"></div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+    <script th:src="@{/ClientStatic/js/pagination-contest.js}"></script>
+    <script th:src="@{/ClientStatic/js/script.js}"></script>
+  </body>
+</html>

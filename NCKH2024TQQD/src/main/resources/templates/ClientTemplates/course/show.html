@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CodeHubt</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+            integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+            crossorigin="anonymous"
+    />
+    <link rel="stylesheet" th:href="@{/ClientStatic/css/style.css}">
+    <link rel="stylesheet" th:href="@{/ClientStatic/css/base.css}">
+    <link rel="stylesheet" th:href="@{/ClientStatic/css/footer.css}">
+    <link rel="stylesheet" th:href="@{/ClientStatic/css/header.css}">
+</head>
+
+<body>
+<!-- Header -->
+<div class="page-wrapper">
+    <div th:replace="~{ClientTemplates/layout/header :: header}"></div>
+    <!--Filter-->
+    <div th:replace="~{ClientTemplates/layout/filter :: filters(filterAction='/courses/show')}"></div>
+    <div class="banner">
+        <div class="container-fluid px-3">
+            <img
+                    src="https://codelearn.io/_next/image?url=https%3A%2F%2Fs3-sgn09.fptcloud.com%2Fcodelearnstorage%2Fevent%2Fbanner%2F30-4%2F30-4-vn.png%3Fv%3D1&w=1920&q=100"
+                    alt=""
+            />
+        </div>
+    </div>
+    <div class="content-wrapper">
+        <div class="container">
+            <div class="courses-container">
+                <div class="courses-grid">
+                    <!-- Sửa ở đây - thêm thẻ đóng </a> -->
+                    <a th:each="course : ${courses}"
+                       th:href="@{/course/{slug}(slug=${course.slug})}"
+                       class="course-card">
+                        <!-- Hình ảnh khóa học -->
+                        <div class="course-image">
+                            <img th:if="${course.imageUrl}" th:src="${course.imageUrl}" alt="Course image">
+                            <div th:unless="${course.imageUrl}" class="image-placeholder">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                        </div>
+
+                        <!-- Nội dung khóa học -->
+                        <div class="course-content">
+                            <h3 class="course-title" th:text="${course.title}"></h3>
+
+                            <div class="course-meta">
+                                <div class="course-instructor">
+                                    <i class="fas fa-user-tie"></i>
+                                    <span th:text="${course.instructorUserName} ?: 'CodeHubt Team'"></span>
+                                </div>
+                                <div class="course-rating">
+                                    <i class="fas fa-star"></i>
+                                    <span th:text="${course.rating} ?: '0.00'"></span>
+                                </div>
+                            </div>
+
+                            <div class="course-pricing">
+                                <!-- Giá gốc nếu có giảm giá -->
+                                <span th:if="${course.discountPrice != null}" class="original-price"
+                                      th:text="'₫' + ${#numbers.formatDecimal(course.price, 1, 2, 'COMMA')}"></span>
+
+                                <!-- Giá hiện tại (giảm hoặc thường) -->
+                                <span th:class="${course.discountPrice != null ? 'discounted-price' : 'current-price'}"
+                                      th:text="'₫' + ${#numbers.formatDecimal(course.discountPrice != null ? course.discountPrice : course.price, 1, 2, 'COMMA')}"></span>
+
+                                <!-- Miễn phí -->
+                                <span th:if="${course.price == 0}" class="free-badge">MIỄN PHÍ</span>
+                            </div>
+                        </div>
+                    </a> <!-- Đây là thẻ đóng bị thiếu -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <div th:replace="~{ClientTemplates/layout/footer :: footer}"></div>
+</div>
+<script th:src="@{/ClientStatic/js/script.js}"></script>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+.section-one {
+  background-color: #F3F3F3;
+  padding: 20px 0;
+  margin-top: 50px;
+}
+.section-one .inner-title {
+  font-size: 50px;
+  margin-left: 210px;
+  font-weight: 600;
+}
+/* section two */
+.section-two {
+  margin-top: 30px;
+  background:#fff;
+}
+.section-two .inner-role {
+  display: flex;
+  gap: 30px;
+  font-size: 18px;
+}
+.section-two .inner-role .inner-contest {
+  padding: 10px;
+  border-bottom: 5px solid green;
+  border-radius: 8px;
+}
+.section-two .inner-role .inner-challenges {
+  padding: 10px;
+}
+.section-two .inner-role .inner-contest:hover {
+  padding: 10px;
+  background-color: #F3F3F3;
+}
+.section-two .inner-role .inner-challenges:hover {
+  padding: 10px;
+  background-color: #F3F3F3;
+}
+.section-two .inner-search {
+  margin-top: 10px;
+  text-align: right;
+}
+.section-two .inner-search input {
+  padding-right: 50px;
+}
+.section-two .inner-search i {
+  font-size: 20px;
+  margin-right: 5px;
+}
+.section-two .inner-title{
+    margin-top: 20px;
+}
+/* end section two */
+/* section three */
+.section-three{
+  background:#fff;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+.section-three table,tr th,td{
+  border: 1px solid black;
+  text-align: center;
+}
+.section-three table th,td{
+  padding: 10px 45px;
+  white-space: pre-wrap;
+  max-width: 400px;
+  min-width: 200px;
+}
+.section-three table th{
+  background-color: gray;
+  color: #fff;
+}
+/* end section three */
+/* button */
+.inner-button button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: #20d761;
+}
+.inner-button button:hover {
+  background-color: #baf3ce;
+}
+/* end button */
+
+
+
+/*them hieu ung khi tro chuot vao management contest*/
+.clickable-row {
+  cursor: pointer;
+}
+.clickable-row:hover {
+  background-color: #f2f2f2;
+}
+/*ket thuc them hieu ung khi tro chuot vao management contest*/
+

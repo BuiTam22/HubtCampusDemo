@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>CodeHubt Login</title>
+    <link rel="stylesheet" th:href="@{/ClientStatic/css/login.css}">
+</head>
+
+<body>
+<div class="main">
+    <h1>CodeHubt</h1>
+    <h2>Login</h2>
+    <div id="message" class="error"></div>
+
+    <form id="registerForm" style="display: none">
+
+        <label>Tên Tài Khoản :
+            <input type="text" name="userName" required pattern="[a-z0-9]+" title="Chỉ viết thường không dấu, không khoảng trắng">
+            <small class="hint">(Chỉ dùng chữ thường và số, không dấu, không khoảng trắng)</small>
+        </label>
+
+        <label>Email:
+            <input type="email" name="email" required>
+        </label>
+
+        <label>Mật khẩu:
+            <div class="password-container">
+                <input type="password" name="password" required>
+            </div>
+        </label>
+
+        <label>Họ Và Tên :
+            <input type="text" name="fullName" required>
+        </label>
+
+        <label>Sinh Nhật :
+            <input type="date" name="dateOfBirth">
+        </label>
+
+        <label>Số Điện Thoại :
+            <input type="text" name="phoneNumber">
+        </label>
+
+        <label>Địa Chỉ :
+            <input type="text" name="address">
+        </label>
+
+        <label>Bạn Là</label>
+        <select name="role" id="role">
+            <option value="STUDENT">Student</option>
+            <option value="TEACHER">Teacher</option>
+        </select>
+
+
+        <div class="wrap">
+            <button type="submit" id="submitRegister">
+                <span class="button-text">Submit</span>
+                <button onclick="showFormLogin()">Back to Login</button>
+
+            </button>
+        </div>
+
+    </form>
+
+    <form id="loginForm" style="display: block" >
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"
+               placeholder="Nhập Tên Tài Khoản " required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"
+               placeholder="Nhập Mật Khẩu Của Bạn " required>
+
+
+        <div class="wrap">
+            <button type="submit" id="submitBtn">
+                <span class="button-text">Submit</span>
+                <span class="spinner"></span>
+            </button>
+        </div>
+
+
+    </form>
+
+    <form id="forgotForm" style="display: none" >
+        <label >Email:</label>
+        <input type="email" id="forgorEmail" name="email"
+               placeholder="Nhập Email Của Bạn required">
+        <div class="wrap">
+            <button type="submit" id="submitforgot">
+                <span class="button-text">Submit</span>
+                <button onclick="showFormLogin()">Back to Login</button>
+
+            </button>
+        </div>
+    </form>
+
+    <form id="step2" class="hidden">
+        <label>Nhập Mã Otp</label>
+        <input type="text" id="otp" placeholder="Nhập Mã Otp">
+        <button type="submit" >Xác Thực OTP</button>
+
+    </form>
+    <form id="step3" class="hidden">
+        <label> Nhập Mật Khẩu Mới</label>
+        <input type="text" id="newPassword" placeholder="Mật Khẩu Mới">
+        <button type="submit" >Đặt Lại Mật Khẩu Mới</button>
+    </form>
+    <div id="navButtons">
+        <a onclick="showFormRegister()">Register</a>
+        <a onclick="showFormForgot()">Forgot Password</a>
+    </div>
+</div>
+
+<!-- Định nghĩa apiBaseUrl trước khi gọi login.js -->
+<script th:inline="javascript">
+    /*<![CDATA[*/
+    var apiBaseUrl = /*[[${@environment.getProperty('api.base.url')}]]*/ "http://localhost:3000";
+    /*]]>*/
+</script>
+
+<script th:src="@{/ClientStatic/js/login.js}"></script>
+
+</body>
+
+</html>

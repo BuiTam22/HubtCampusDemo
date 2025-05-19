@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Submission</title>
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+            integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+            crossorigin="anonymous"
+    />
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" th:href="@{/ClientStatic/css/submission.css}">
+    <link rel="stylesheet" th:href="@{/ClientStatic/css/problem_nav.css}">
+    <link rel="stylesheet" th:href="@{/ClientStatic/css/footer.css}">
+    <link rel="stylesheet" th:href="@{/ClientStatic/css/header.css}">
+</head>
+<body>
+<!-- Header -->
+<div th:replace="~{ClientTemplates/layout/header :: header}"></div>
+<!-- Problem Navigation -->
+<div th:replace="~{ClientTemplates/layout/problem-nav :: problemNav(slug=${slug})}"></div>
+<div class="page-wrapper">
+    <div class="inner-head">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="inner-title" th:text="${submissions.size() > 0 ? submissions[0].exerciseName : 'Không có bài nộp'}">Chưa có submission nào</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section-one">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-8">
+                    <div class="inner-box">
+                        <table class="custom-table">
+                            <thead>
+                            <tr>
+                                <th>RESULT</th>
+                                <th>SCORE</th>
+                                <th>LANGUAGE</th>
+                                <th>TIME</th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr th:each="submission : ${submissions}"
+                                th:data-code="${submission.code}"
+                                th:data-passed="${submission.testCasesPassed}"
+                                th:data-total="${submission.totalTestCases}"
+                                th:data-score="${submission.score}"
+                                th:data-language="${submission.language}">
+
+                                <td th:class="${submission.status == 'accepted' ? 'result-true' : 'result-false'}">
+                                    <i th:class="${submission.status == 'accepted' ? 'fa-solid fa-check' : 'fas fa-times'}"></i>
+                                    <span th:text="${submission.status == 'accepted' ? 'AC' : 'Wrong Answer'}"></span>
+                                </td>
+                                <td th:text="${submission.score}">10.0</td>
+                                <td th:text="${submission.language}">Java</td>
+                                <td th:text="${#temporals.format(submission.submittedAt, 'HH:mm dd-MM-yyyy')}"></td>
+                                <td class="view-results">View Results</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <nav>
+                            <ul id="pagination" class="pagination justify-content-center mt-4"></ul>
+                        </nav>
+                    </div>
+                    <!-- Thêm phần này sau bảng trong file submission.html -->
+                    <div class="submission-detail mt-4" id="submissionDetail" style="display: none;">
+                        <div class="card">
+                            <div class="card-header bg-primary text-white">
+                                <h5 class="mb-0">Submission Details</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row mb-3">
+                                    <div class="col-md-4">
+                                        <strong>Test Cases:</strong>
+                                        <span id="detailPassed">0</span>/<span id="detailTotal">0</span>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <strong>Score:</strong> <span id="detailScore">0</span>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <strong>Language:</strong> <span id="detailLanguage">-</span>
+                                    </div>
+                                </div>
+                                <div class="code-section">
+                                    <pre class="bg-light p-3 rounded"><code id="detailCode"></code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4">
+                    <div class="help-box">
+                        <h6 class="help-title">NEED HELP?</h6>
+                        <hr>
+                        <div class="help-links">
+                            <a href="#" class="help-link">
+                                <i class="fas fa-comments"></i> View discussions
+                            </a>
+                            <a href="#" class="help-link">
+                                <i class="fas fa-trophy"></i> View top submissions
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer -->
+<div th:replace="~{ClientTemplates/layout/footer :: footer}"></div>
+<!--<script th:src="@{/ClientStatic/js/script.js}"></script>-->
+
+<script th:src="@{/ClientStatic/js/pagination-submission.js}"></script>
+<script th:src="@{/ClientStatic/js/view-result-detail.js}"></script>
+<script th:src="@{/ClientStatic/js/problem-nav.js}"></script>
+<script th:src="@{/ClientStatic/js/script.js}"></script>
+<script
+        src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"
+></script>
+<script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"
+></script>
+</body>
+
+</html>

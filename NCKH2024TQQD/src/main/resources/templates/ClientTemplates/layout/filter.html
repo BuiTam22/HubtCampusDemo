@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<div class="filters" th:fragment="filters">
+    <form th:action="@{${filterAction}}" method="get" id="filterForm">
+    <!-- Search box -->
+        <input type="text"
+               th:name="search"
+               th:value="${param.search}"
+               placeholder="Nhập nội dung tìm kiếm"
+               class="search-box"
+               autocomplete="off">
+
+        <!-- Status filter -->
+        <select class="dropdown" th:name="status">
+            <option value="">Trạng thái</option>
+            <option value="outstanding"
+                    th:selected="${param.status == 'outstanding'}">Nổi bật</option>
+            <option value="normal"
+                    th:selected="${param.status == 'normal'}">Bình thường</option>
+        </select>
+
+        <!-- Difficulty filter -->
+        <select class="dropdown" th:name="difficulty">
+            <option value="">Cấp độ</option>
+            <option value="easy"
+                    th:selected="${param.difficulty == 'easy'}">Dễ</option>
+            <option value="medium"
+                    th:selected="${param.difficulty == 'medium'}">Trung Bình</option>
+            <option value="hard"
+                    th:selected="${param.difficulty == 'hard'}">Khó</option>
+        </select>
+
+        <!-- Submit button -->
+        <button type="submit" class="submit-button">Lọc kết quả</button>
+    </form>
+</div>

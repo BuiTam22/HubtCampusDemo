@@ -1,0 +1,143 @@
+/* Course List Table Styling */
+#courseList {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#courseList p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60px;
+    margin: 0;
+    font-size: 18px;
+    color: #555;
+    position: relative;
+}
+
+/* Error and empty messages */
+#courseList p:contains("Không có khóa học") {
+    color: #707070;
+    font-style: italic;
+}
+
+/* Table styling - removing default border */
+#courseList table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    overflow: hidden;
+    border: none;
+}
+
+#CourseList table[border="1"] {
+    border: none;
+}
+
+/* Header styling */
+#CourseList thead {
+    background-color: #34a853; /* Green color for courses to differentiate from lessons */
+    color: white;
+}
+
+#CourseList th {
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    border: none;
+}
+
+/* Row styling */
+#CourseList tbody tr {
+    border-bottom: 1px solid #dddddd;
+    transition: background-color 0.3s;
+}
+
+#CourseList tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+#CourseList tbody tr:hover {
+    background-color: #e6f4ea; /* Light green hover to match header */
+}
+
+#CourseList td {
+    padding: 12px 15px;
+    font-size: 14px;
+    color: #333;
+    border: none;
+}
+
+/* Column-specific styling */
+#CourseList td:nth-child(1) {
+    font-weight: 600;
+    color: #34a853;
+}
+
+/* Price column styling */
+#CourseList td:nth-child(3) {
+    font-weight: 500;
+}
+
+/* Discount price styling */
+#CourseList td:nth-child(4) {
+    color: #ea4335;
+    font-weight: 500;
+}
+
+/* Price formatting */
+#CourseList td:nth-child(3)::before,
+#CourseList td:nth-child(4)::before {
+    content: "₫";
+    margin-right: 2px;
+    opacity: 0.7;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #CourseList {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    #CourseList th,
+    #CourseList td {
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+}
+
+/* Add course button styling (if you have one) */
+.add-course-btn {
+    background-color: #34a853;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 15px;
+    display: inline-flex;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.add-course-btn:hover {
+    background-color: #2d9249;
+}
+
+.add-course-btn::before {
+    content: "+";
+    margin-right: 8px;
+    font-size: 18px;
+    font-weight: 700;
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Management</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" th:href="@{/ClientStatic/css/base.css}" />
+    <link rel="stylesheet" th:href="@{/ClientStatic/css/footer.css}" />
+    <link rel="stylesheet" th:href="@{/ClientStatic/css/header.css}" />
+    <link rel="stylesheet" th:href="@{/ClientStatic/css/management.css}" />
+<!--    <link rel="stylesheet" th:href="@{/ClientStatic/css/contest.css}" />-->
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <div th:replace="~{ClientTemplates/layout/header :: header}"></div>
+      <div class="section-one">
+        <div class="inner-title">Quản lý</div>
+      </div>
+      <div class="section-two">
+        <div class="container">
+          <div class="row mb-3">
+            <div class="col-xl-6">
+              <div class="inner-role">
+                <a href=""><div class="inner-contest">Quản lý bài học/cuộc thi</div></a>
+                <a href=""
+                ><div class="inner-challenges">Quản lý bài tập</div></a
+                >
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div class="inner-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Start typing..." />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xl-10">
+              <p class="inner-title">Các cuộc thi bạn có thể chỉnh sửa nằm bên dưới.</p>
+            </div>
+            <div class="col-xl-2">
+              <div class="inner-button">
+                <button id="createContestButton">Tạo bài học</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-three">
+        <div class="container">
+          <div class="row">
+            <table>
+              <tr>
+                <th>Contest Name</th>
+                <th>Contest Slug</th>
+                <th>Contest Owner</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+              </tr>
+              <tr>
+              <tr th:each="contest : ${contests}" th:attr="data-slug=${contest.slug}" class="clickable-row">
+                <td th:text="${contest.title}">Contest Title</td>
+                <td th:text="${contest.slug}">Contest Slug</td>
+                <td th:text="${contest.userNameOwner}">Owner</td>
+                <td th:text="${#temporals.format(contest.contestStartTime, 'dd/MM/yyyy')}"></td>
+                <td th:text="${#temporals.format(contest.contestEndTime, 'dd/MM/yyyy')}"></td>
+              </tr>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div th:replace="~{ClientTemplates/layout/footer :: footer}"></div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const rows = document.querySelectorAll(".clickable-row");
+        rows.forEach(row => {
+          row.addEventListener("click", () => {
+            const slug = row.getAttribute("data-slug");
+            if (slug) {
+              window.location.href = `/management/contest/edit/${slug}`;
+            }
+          });
+        });
+      });
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+    <script th:src="@{/ClientStatic/js/pagination-contest.js}"></script>
+    <script th:src="@{/ClientStatic/js/script.js}"></script>
+  </body>
+</html>

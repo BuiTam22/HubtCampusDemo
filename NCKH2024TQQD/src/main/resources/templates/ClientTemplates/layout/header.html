@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" th:href="@{/ClientStatic/css/header.css}">
+</head>
+<body>
+<header class="header" th:fragment="header">
+    <div class="header-content">
+        <a th:href="@{/}" class="logo-container problem-nav-item">
+            <div class="logo-main">Code</div>
+            <div class="logo-sub">Hubt</div>
+        </a>
+        <nav class="main-nav">
+            <a th:href="@{/course}" th:classappend="${activePage != null and activePage.startsWith('/course')} ? 'active'" class="problem-nav-item">Khóa học</a>
+            <a th:href="@{/practice}" th:classappend="${activePage != null and activePage.startsWith('/practice')} ? 'active'" class="problem-nav-item">Luyện tập</a>
+            <a th:href="@{/contest}" th:classappend="${activePage != null and activePage.startsWith('/contest')} ? 'active'" class="problem-nav-item">Cuộc thi</a>
+            <a th:href="@{/blog}" th:classappend="${activePage != null and activePage.startsWith('/blog')} ? 'active'" class="problem-nav-item">Blog</a>
+            <!--            <a th:href="@{/magazine}" th:classappend="${activePage != null and activePage.startsWith('/magazine')} ? 'active'" class="problem-nav-item">Tạp chí</a>-->
+            <a th:href="@{/about}" th:classappend="${activePage != null and activePage.equals('/about')} ? 'active'" class="problem-nav-item">Về chúng tôi</a>
+        </nav>
+
+        <div class="user-controls">
+
+            <div class="user-profile" id="userProfile">
+                <!-- Nếu đã đăng nhập, hiển thị thông tin người dùng -->
+                <div th:if="${userFullName != null}">
+                    <span class="username" th:text="${userFullName}">Guest</span>
+                    <i class="fas fa-user"></i>
+                    <!-- Dropdown menu -->
+                    <div class="user-dropdown hidden" id="userDropdown">
+                        <a th:href="@{/profile}">Hồ sơ</a>
+                        <a th:href="@{/management/contest}">Quản lý</a>
+                        <a class="logout-button" th:href="@{/logout}">Đăng xuất</a>
+                    </div>
+                </div>
+
+                <!-- Nếu chưa đăng nhập, hiển thị nút đăng nhập -->
+                <div th:if="${userFullName == null}">
+                    <button class="button-log-in" onclick="window.location.href='/login/show'">Đăng Nhập</button>
+                </div>
+            </div>
+
+            <i class="fas fa-bell user-button" ></i>
+
+        </div>
+    </div>
+</header>
+</body>
+</html>

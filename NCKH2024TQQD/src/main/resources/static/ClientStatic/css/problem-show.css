@@ -1,0 +1,156 @@
+.section-one {
+  margin-top: 150px;
+}
+/* Panel đề bài */
+.problem-panel {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 25px 30px;
+  margin-bottom: 20px;
+}
+
+.problem-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.problem-description h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.problem-description p,
+.problem-description span {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* Code Editor Panel */
+.editor-panel {
+  background-color: #fff;
+  color: #f1f1f1;
+  border-radius: 12px;
+  overflow: hidden;
+  min-height: 500px;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.11), 0 2px 2px rgba(0,0,0,0.11), 0 4px 4px rgba(0,0,0,0.11), 0 6px 8px rgba(0,0,0,0.11), 0 8px 16px rgba(0,0,0,0.11);
+}
+
+.editor-header {
+  background-color: #2d2d2d;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #ffffff;
+  border-bottom: 1px solid #444;
+}
+
+.language-selector {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.scrollable-panel {
+  height: 100%;
+  max-height: 100%;
+  overflow-y: auto;
+  padding-right: 15px;
+}
+.problem-panel.scrollable-panel {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+/* Monaco Editor Container */
+#editor {
+  height: 500px;
+  padding: 10px;
+  font-family: monospace;
+}
+.editor.essay-editor {
+  width:100%;
+  max-height: 500px;
+  max-width: 100%;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: black;
+  overflow-y: auto;
+  overflow-x: hidden;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  outline: none;
+  box-sizing: border-box;
+}
+/* Sample I/O */
+.sample-io h4 {
+  margin-top: 20px;
+  font-weight: 600;
+  color: #222;
+}
+
+.sample-io pre {
+  background-color: #f1f1f1;
+  padding: 15px;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-family: monospace;
+}
+
+/* Kết quả nộp bài */
+.test-cases {
+  margin: 30px auto;
+  max-width: 900px;
+}
+
+.test-result {
+  background-color: #ffffff;
+  border-left: 4px solid #28a745;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+}
+
+.test-result h3 {
+  color: #28a745;
+  font-weight: bold;
+}
+
+/* Nút chạy & nộp */
+.button-group {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.run-button,
+.submit-button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 6px;
+  margin: 0 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.submit-button {
+  background-color: #28a745;
+}
+
+.run-button:hover {
+  background-color: #0069d9;
+}
+
+.submit-button:hover {
+  background-color: #218838;
+}

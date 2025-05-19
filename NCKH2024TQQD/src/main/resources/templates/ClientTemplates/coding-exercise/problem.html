@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CodeHubt</title>
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+            integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+            crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" th:href="@{/ClientStatic/css/problem-show.css}">
+    <link rel="stylesheet" th:href="@{/ClientStatic/css/problem_nav.css}">
+    <link rel="stylesheet" th:href="@{/ClientStatic/css/footer.css}">
+    <link rel="stylesheet" th:href="@{/ClientStatic/css/header.css}">
+</head>
+
+<body>
+<!-- Header -->
+<div th:replace="~{ClientTemplates/layout/header :: header}"></div>
+
+<!-- Problem Navigation -->
+<div th:replace="~{ClientTemplates/layout/problem-nav :: problemNav(slug=${slug})}"></div>
+
+<div class="content-wrapper">
+    <div class="section-one">
+        <div class="container-fluid px-4">
+            <div class="row">
+                <div class="col-xl-5">
+                    <div class="problem-panel scrollable-panel">
+                        <h1 class="problem-title" th:text="${exercise.title}">1. Array Sum</h1>
+                        <div class="problem-description">
+                            <p th:text="${exercise.description}">Given an array of integers, find the sum of its elements.</p>
+
+                            <h3 class="input-format">Định dạng đầu vào</h3>
+                            <!-- Hiển thị inputFormat -->
+                            <p th:text="${exercise.inputFormat}">Số nguyên n</p>
+
+                            <h3 class="output-format">Định dạng ra vào</h3>
+                            <!-- Hiển thị outputFormat -->
+                            <p th:text="${exercise.outputFormat}">Số n*2</p>
+
+                            <h3 class="constraint">Ràng buộc</h3>
+                            <!-- Hiển thị constraintName -->
+                            <p th:text="${exercise.constraintName}">1<=n<=10^9</p>
+                            <p>
+                                <span th:text="'Thời gian tối đa: ' + ${exercise.timeLimit} + 'ms'"></span><br/>
+                                <span th:text="'Giới hạn bộ nhớ: ' + ${exercise.memoryLimit} + 'MB'"></span>
+                            </p>
+
+                            <!-- Sample IO -->
+                            <div class="sample-io" th:if="${#lists.size(exercise.exerciseTestCases) > 0}">
+                                <div th:each="testCase : ${exercise.exerciseTestCases}">
+                                    <div th:if="${testCase.public}">
+                                        <h4>Ví dụ đầu vào</h4>
+                                        <pre th:text="${testCase.input}">6
+            1 2 3 4 5 6</pre>
+                                        <h4>Ví dụ đầu ra</h4>
+                                        <pre th:text="${testCase.expectedOutput}">21</pre>
+                                        <!-- Chỉ lấy 1 test case public đầu tiên -->
+                                        <div th:remove="all"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-xl-7">
+                    <div class="editor-panel">
+                        <div class="editor-header">
+                            <span>Code</span>
+                            <select class="language-selector" id="languageSelector">
+                                <option value="python" th:selected="${exercise.programmingLanguage == 'Python'}">Python 3</option>
+                                <option value="java" th:selected="${exercise.programmingLanguage == 'Java'}">Java</option>
+                                <option value="javascript" th:selected="${exercise.programmingLanguage == 'JavaScript'}">JavaScript</option>
+                            </select>
+                        </div>
+                        <div
+                                id="editor"
+                                th:attr="data-exercise-id=${exercise.exerciseID}">
+                            <span th:utext="${exercise.initialCode}"
+                            >// Viết code vào đây</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Test Cases -->
+<div class="test-cases">
+    <!-- Test Cases Result -->
+    <div class="test-result" id="testResultContainer" style="display: none;">
+        <h3>Kết quả nộp bài</h3>
+        <p><strong>Ngôn ngữ:</strong> <span id="resultLanguage"></span></p>
+        <p><strong>Trạng thái:</strong> <span id="resultStatus"></span></p>
+        <p><strong>Số test case qua:</strong> <span id="resultPassed"></span>/<span id="resultTotal"></span></p>
+        <p><strong>Điểm:</strong> <span id="resultScore"></span></p>
+
+    </div>
+</div>
+
+<!-- Buttons -->
+<div class="button-group">
+    <button class="run-button">Chạy code</button>
+    <button class="submit-button">Nộp</button>
+</div>
+
+<!-- Footer -->
+<div th:replace="~{ClientTemplates/layout/footer :: footer}"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/loader.js"></script>
+<script th:src="@{/ClientStatic/js/script.js}"></script>
+<script th:src="@{/ClientStatic/js/handle-run-code.js}"></script>
+<script th:src="@{/ClientStatic/js/handle-submit-code.js}"></script>
+<script th:src="@{/ClientStatic/js/handle-code-editor.js}"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+
+</html>

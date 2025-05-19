@@ -1,0 +1,198 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #2c3e50;
+  color: white;
+  padding: 0 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  height: 60px;
+  z-index: 1050;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 24px;
+  color: #4caf50;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.logo-main {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #3498db;
+}
+
+.logo-sub {
+  font-size: 14px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #95a5a6;
+}
+
+.header-controls {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.header-button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.header-button:hover {
+  background: #333;
+}
+/* Thêm vào phần CSS của header */
+.problem-nav-item.active {
+  color: #3498db !important;
+  font-weight: 600;
+}
+
+.problem-nav-item.active::after {
+  width: 100% !important;
+}
+.main-nav {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+  margin: 0 50px;
+}
+
+/*css main-nav cua header*/
+.main-nav {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+  margin: 0 50px;
+}
+.problem-nav-item {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 500;
+  position: relative;
+  padding: 5px 0;
+  transition: color 0.3s;
+}
+
+.problem-nav-item::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #3498db;
+  transition: width 0.3s;
+}
+
+.problem-nav-item:hover {
+  color: #3498db;
+   text-decoration: none;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+.username {
+  font-size: 14px;
+  color: #ecf0f1;
+}
+
+.fa-user {
+  background: #34495e;
+  padding: 8px;
+  border-radius: 50%;
+  font-size: 14px;
+}
+/*ket thuc css main-nav*/
+
+/*dropdown*/
+.user-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 0.5rem 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    z-index: 999;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-dropdown a {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+.user-button {
+    margin-left: 11px;
+    transition: all 0.3s ease; /* Cho hiệu ứng mượt hơn khi hover */
+}
+
+.user-button:hover {
+    background-color: #f0f0f0; /* Màu nền khi hover */
+    cursor: pointer; /* Đổi con trỏ chuột */
+    border-radius: 5px; /* Bo góc nhẹ */
+}
+
+.user-dropdown a:hover {
+    background-color: #f0f0f0;
+}
+
+.hidden {
+    display: none;
+}
+
+.user-profile {
+    position: relative;
+    cursor: pointer;
+}
+/*end dropdown*/
+/* button login */
+.button-log-in{
+  border-radius: 5px;
+  background: rgb(27, 219, 27);
+  margin-bottom:3px;
+}
+/* end button login */
+
+.user-controls{
+    display: contents
+}

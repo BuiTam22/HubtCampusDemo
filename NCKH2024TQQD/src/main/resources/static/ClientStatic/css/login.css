@@ -1,0 +1,117 @@
+/*style.css*/
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    line-height: 1.5;
+    min-height: 100vh;
+    background: #f3f3f3;
+    flex-direction: column;
+    margin: 0;
+}
+
+.main {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    transition: transform 0.2s;
+    width: 500px;
+    text-align: center;
+}
+
+h1 {
+    color: #4CAF50;
+}
+
+h2 {
+    color: #4CAF50;
+}
+
+label {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-align: left;
+    color: #555;
+    font-weight: bold;
+}
+
+input {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    background-color: #4CAF50;
+    width: 100%;
+    font-size: 16px;
+}
+
+.wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* css khi ấn nút submit */
+#submitBtn {
+    position: relative;
+    transition: all 0.3s ease;
+    display: inline-flex; /* Thêm dòng này */
+    align-items: center; /* Thêm dòng này */
+    justify-content: center; /* Thêm dòng này */
+    gap: 8px; /* Thêm khoảng cách giữa text và spinner */
+}
+
+#submitBtn .spinner {
+    display: none;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+    /* Bỏ position: absolute và right: 20px */
+}
+
+#submitBtn.loading .button-text {
+    visibility: visible; /* Sửa từ hidden thành visible */
+    display: inline-block; /* Thêm dòng này */
+}
+
+#submitBtn.loading .spinner {
+    display: inline-block;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#submitBtn:disabled {
+    background-color: #a5d6a7;
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+/*end css khi ấn nút submit */
+
+.hidden { display: none; }
+.error { color: red; margin-bottom: 10px; }
+.success { color: green; margin-bottom: 10px; }
+label { display: block; margin-top: 10px; }

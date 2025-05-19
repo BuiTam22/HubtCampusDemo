@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Về chúng tôi</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" th:href="@{/ClientStatic/css/base.css}" />
+    <link rel="stylesheet" th:href="@{/ClientStatic/css/footer.css}" />
+    <link rel="stylesheet" th:href="@{/ClientStatic/css/header.css}" />
+    <link rel="stylesheet" th:href="@{/ClientStatic/css/home.css}" />
+<!--    <link rel="stylesheet" th:href="@{/ClientStatic/css/style.css}" />-->
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <div th:replace="~{ClientTemplates/layout/header :: header}"></div>
+      <div class="section-one">
+        <div class="inner-wrap">
+          <div class="inner-title">
+            CodeHUBT dream-winged patchwork
+          </div>
+          <div class="inner-desc">
+            CodeHUBT là hệ thống cung cấp những khóa học chất lượng cao về
+            lập trình với mục tiêu lớn nhất là giúp các bạn sinh viên IT phát
+            triển kiến thức, sự nghiệp !
+          </div>
+          <div class="inner-button">
+            <div class="button button-one">Các Khoá Học</div>
+            <div class="button button-two">Đăng Ký Ngay</div>
+          </div>
+        </div>
+      </div>
+      <div class="section-two">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="box-head">
+                <div class="inner-title">Khóa Học Tại CodeHUBT</div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xl-4 col-md-4 col-sm-6 col-12">
+              <div class="course-card">
+                <div class="inner-image">
+                  <a href=""
+                  ><img
+                          src="https://cdn-main.28tech.com.vn/thumbs/anh-khoa-hoc/anh_dai_dien_khoa_hoc/new/c%C6%A1%20s%E1%BB%9F%20d%E1%BB%AF%20li%E1%BB%87u%20v%C3%A0%20sql_thumb_500.png"
+                          alt=""
+                  /></a>
+                </div>
+                <div class="inner-content">
+                  <div class="inner-assess">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <p>(120 Đánh Giá)</p>
+                  </div>
+                  <div class="inner-title">Cơ Sở Dữ Liệu Và SQL</div>
+                  <div class="inner-info">
+                    <img
+                            src="https://th.bing.com/th/id/OIP.x0GBD5wzzx3MV8mdcuCojwHaKV?w=211&h=295&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"
+                            alt=""
+                    />
+                    <div class="inner-owner">Đội Ngũ HUBT</div>
+                  </div>
+                  <div class="inner-price">
+                    <div class="price-new">2,400,000<span>đ</span></div>
+                    <div class="price-old">6,000,000<span>đ</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-md-4 col-sm-6 col-12">
+              <div class="course-card">
+                <div class="inner-image">
+                  <a href=""
+                  ><img
+                          src="https://cdn-main.28tech.com.vn/thumbs/anh-khoa-hoc/anh_dai_dien_khoa_hoc/new/c%C6%A1%20s%E1%BB%9F%20d%E1%BB%AF%20li%E1%BB%87u%20v%C3%A0%20sql_thumb_500.png"
+                          alt=""
+                  /></a>
+                </div>
+                <div class="inner-content">
+                  <div class="inner-assess">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <p>(120 Đánh Giá)</p>
+                  </div>
+                  <div class="inner-title">Cơ Sở Dữ Liệu Và SQL</div>
+                  <div class="inner-info">
+                    <img
+                            src="https://th.bing.com/th/id/OIP.x0GBD5wzzx3MV8mdcuCojwHaKV?w=211&h=295&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"
+                            alt=""
+                    />
+                    <div class="inner-owner">Đội Ngũ HUBT</div>
+                  </div>
+                  <div class="inner-price">
+                    <div class="price-new">2,400,000<span>đ</span></div>
+                    <div class="price-old">6,000,000<span>đ</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-md-4 col-sm-6 col-12">
+              <div class="course-card">
+                <div class="inner-image">
+                  <a href=""
+                  ><img
+                          src="https://cdn-main.28tech.com.vn/thumbs/anh-khoa-hoc/anh_dai_dien_khoa_hoc/new/c%C6%A1%20s%E1%BB%9F%20d%E1%BB%AF%20li%E1%BB%87u%20v%C3%A0%20sql_thumb_500.png"
+                          alt=""
+                  /></a>
+                </div>
+                <div class="inner-content">
+                  <div class="inner-assess">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <p>(120 Đánh Giá)</p>
+                  </div>
+                  <div class="inner-title">Cơ Sở Dữ Liệu Và SQL</div>
+                  <div class="inner-info">
+                    <img
+                            src="https://th.bing.com/th/id/OIP.x0GBD5wzzx3MV8mdcuCojwHaKV?w=211&h=295&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"
+                            alt=""
+                    />
+                    <div class="inner-owner">Đội Ngũ HUBT</div>
+                  </div>
+                  <div class="inner-price">
+                    <div class="price-new">2,400,000<span>đ</span></div>
+                    <div class="price-old">6,000,000<span>đ</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-md-4 col-sm-6 col-12">
+              <div class="course-card">
+                <div class="inner-image">
+                  <a href=""
+                  ><img
+                          src="https://cdn-main.28tech.com.vn/thumbs/anh-khoa-hoc/anh_dai_dien_khoa_hoc/new/c%C6%A1%20s%E1%BB%9F%20d%E1%BB%AF%20li%E1%BB%87u%20v%C3%A0%20sql_thumb_500.png"
+                          alt=""
+                  /></a>
+                </div>
+                <div class="inner-content">
+                  <div class="inner-assess">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <p>(120 Đánh Giá)</p>
+                  </div>
+                  <div class="inner-title">Cơ Sở Dữ Liệu Và SQL</div>
+                  <div class="inner-info">
+                    <img
+                            src="https://th.bing.com/th/id/OIP.x0GBD5wzzx3MV8mdcuCojwHaKV?w=211&h=295&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"
+                            alt=""
+                    />
+                    <div class="inner-owner">Đội Ngũ HUBT</div>
+                  </div>
+                  <div class="inner-price">
+                    <div class="price-new">2,400,000<span>đ</span></div>
+                    <div class="price-old">6,000,000<span>đ</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-three">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-5">
+              <div class="inner-image">
+                <img
+                        src="https://cdn-main.28tech.com.vn/media/anh-khoa-hoc/lo_trinh_khoa_hoc/dai_dien1.png"
+                        alt=""
+                />
+                <div class="inner-image-small">
+                  <img
+                          nh-lazy="image"
+                          src="https://cdn-main.28tech.com.vn/media/core/icons/advisor-sm-1.svg"
+                          style=""
+                  />
+                </div>
+                <div class="inner-noname">
+                  <div class="inner-icon">
+                    <i class="fa-solid fa-book-open"></i>
+                  </div>
+                  <div class="inner-name">HUBT</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-7">
+              <div class="box-head">
+                <div class="inner-title">Về CodeHUBT</div>
+              </div>
+              <div class="inner-desc">
+                CodeHUBT nền tảng được xây dựng bởi một đội nhóm gồm các sinh viên hiện đang học ở Trường Đại học Kinh doanh và Công nghệ Hà nội nhưng có chung niềm đam mê với công nghệ
+                và chia sẻ kiến thức.
+              </div>
+              <div class="inner-desc">
+                CodeHUBT luôn cố gắng đổi mới, trau dồi kỹ năng, đón nhận đóng góp,
+                khắc phục những điểm chưa tốt để mang đến cho các bạn học viên
+                những khóa học lập trình với chất lượng cao nhất
+              </div>
+              <div class="inner-detail">
+                <div class="inner-icon">
+                  <i class="fa-regular fa-circle-check"></i>
+                </div>
+                <div class="inner-title">Giảng viên giàu kinh nghiệm</div>
+              </div>
+              <div class="inner-detail">
+                <div class="inner-icon">
+                  <i class="fa-regular fa-circle-check"></i>
+                </div>
+                <div class="inner-title">Bài giảng và bài tập chất lượng</div>
+              </div>
+              <a href="">
+                <div class="button-course">
+                  <p>Danh Sách Khoá Học</p>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-four">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="box-head">
+                <div class="inner-title">Danh Mục Nổi Bật</div>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+<!--            <div class="col-xl-3">-->
+<!--              <a href="">-->
+<!--                <div class="inner-box">-->
+<!--                  <img-->
+<!--                          src="https://cdn-main.28tech.com.vn/media/core/icons/zoom.png"-->
+<!--                          alt=""-->
+<!--                  />-->
+<!--                  <div class="inner-title">Khoá Học Zoom</div>-->
+<!--                  <div class="inner-desc">7 Khoá Học</div>-->
+<!--                </div>-->
+<!--              </a>-->
+<!--            </div>-->
+<!--            <div class="col-xl-3">-->
+<!--              <a href="">-->
+<!--                <div class="inner-box">-->
+<!--                  <img-->
+<!--                          src="https://cdn-main.28tech.com.vn/media/core/icons/onlinelearning.png"-->
+<!--                          alt=""-->
+<!--                  />-->
+<!--                  <div class="inner-title">Khoá Học Video</div>-->
+<!--                  <div class="inner-desc">2 Khoá Học</div>-->
+<!--                </div>-->
+<!--              </a>-->
+<!--            </div>-->
+            <div class="col-xl-3">
+              <a href="">
+                <div class="inner-box">
+                  <img
+                          src="https://cdn-main.28tech.com.vn/media/core/icons/blog.png"
+                          alt=""
+                  />
+                  <div class="inner-title">Blog Lập Trình</div>
+                  <div class="inner-desc">100+ Bài Viết</div>
+                </div>
+              </a>
+            </div>
+            <div class="col-xl-3">
+              <a href="">
+                <div class="inner-box">
+                  <img
+                          src="https://cdn-main.28tech.com.vn/media/core/icons/fb.png"
+                          alt=""
+                  />
+                  <div class="inner-title">Fanpage Facebook</div>
+                  <div class="inner-desc">24.500+ Theo Dõi</div>
+                </div>
+              </a>
+            </div>
+            <div class="col-xl-3">
+              <a href="">
+                <div class="inner-box">
+                  <img
+                          src="https://cdn-main.28tech.com.vn/media/core/icons/youtube%20(1).png"
+                          alt=""
+                  />
+                  <div class="inner-title">Kênh Youtobe</div>
+                  <div class="inner-desc">66.500+ Theo Dõi</div>
+                </div>
+              </a>
+            </div>
+            <div class="col-xl-3">
+              <a href="">
+                <div class="inner-box">
+                  <img
+                          src="https://cdn-main.28tech.com.vn/media/core/icons/tiktok%20(1).png"
+                          alt=""
+                  />
+                  <div class="inner-title">Kênh TikTok</div>
+                  <div class="inner-desc">40.000+ Theo Dõi</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-five">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="box-head">
+                <div class="inner-title">Cảm nhận của học viên</div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xl-4">
+              <div class="inner-box">
+                <div class="inner-head">
+                  <div class="avatar">
+                    <img
+                            src="https://cdn-main.28tech.com.vn/media/core/icons/user.png"
+                            alt=""
+                    />
+                  </div>
+                  <div class="inner-info">
+                    <div class="inner-name">Trần Nhật Nam</div>
+                    <div class="inner-course">Lập Trình C+= và Java</div>
+                  </div>
+                </div>
+                <div class="inner-describe">
+                  “Khóa học quá đỉnh, quá chất lượng, quá dễ hiểu quá tuyệt vời;
+                  Thật không thể tin được !!!. Giảng viên siêu dễ thương, hài
+                  hước, gần gũi, dạy dễ hiểu và hỗ trợ nhiệt tình. Hiện tại mình
+                  đang tham gia khóa Java và C++ cơ bản đến nâng cao, cảm thấy rất
+                  đáng đồng tiền và bát gạo tuy học phí rất phải chăng”
+                </div>
+                <div class="inner-star">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4">
+              <div class="inner-box">
+                <div class="inner-head">
+                  <div class="avatar">
+                    <img
+                            src="https://cdn-main.28tech.com.vn/media/core/icons/user.png"
+                            alt=""
+                    />
+                  </div>
+                  <div class="inner-info">
+                    <div class="inner-name">Trần Nhật Nam</div>
+                    <div class="inner-course">Lập Trình C+= và Java</div>
+                  </div>
+                </div>
+                <div class="inner-describe">
+                  “Khóa học quá đỉnh, quá chất lượng, quá dễ hiểu quá tuyệt vời;
+                  Thật không thể tin được !!!. Giảng viên siêu dễ thương, hài
+                  hước, gần gũi, dạy dễ hiểu và hỗ trợ nhiệt tình. Hiện tại mình
+                  đang tham gia khóa Java và C++ cơ bản đến nâng cao, cảm thấy rất
+                  đáng đồng tiền và bát gạo tuy học phí rất phải chăng”
+                </div>
+                <div class="inner-star">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4">
+              <div class="inner-box">
+                <div class="inner-head">
+                  <div class="avatar">
+                    <img
+                            src="https://cdn-main.28tech.com.vn/media/core/icons/user.png"
+                            alt=""
+                    />
+                  </div>
+                  <div class="inner-info">
+                    <div class="inner-name">Trần Nhật Nam</div>
+                    <div class="inner-course">Lập Trình C+= và Java</div>
+                  </div>
+                </div>
+                <div class="inner-describe">
+                  “Khóa học quá đỉnh, quá chất lượng, quá dễ hiểu quá tuyệt vời;
+                  Thật không thể tin được !!!. Giảng viên siêu dễ thương, hài
+                  hước, gần gũi, dạy dễ hiểu và hỗ trợ nhiệt tình. Hiện tại mình
+                  đang tham gia khóa Java và C++ cơ bản đến nâng cao, cảm thấy rất
+                  đáng đồng tiền và bát gạo tuy học phí rất phải chăng”
+                </div>
+                <div class="inner-star">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-six">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="box-head">
+                <div class="inner-title">Tại sao bạn nên học với CodeHubt</div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xl-5">
+              <img
+                      src="https://cdn-main.28tech.com.vn/media/anh-khoa-hoc/lo_trinh_khoa_hoc/dai_dien2.png"
+                      alt=""
+              />
+            </div>
+            <div class="col-xl-7">
+              <div class="inner-box">
+                <div class="inner-icon">
+                  <img
+                          src="https://cdn-main.28tech.com.vn/media/core/icons/chat-luong-cao.png"
+                          alt=""
+                  />
+                </div>
+                <div class="inner-right">
+                  <div class="inner-titile">Chất lượng cao</div>
+                  <div class="inner-desc">
+                    Nội dung của khóa học được đầu tư cả về chất và lượng, giáo
+                    viên có kinh nghiệm và cực kỳ tâm huyết với công việc giảng
+                    dạy.
+                  </div>
+                </div>
+              </div>
+              <div class="inner-box">
+                <div class="inner-icon">
+                  <img
+                          src="https://cdn-main.28tech.com.vn/media/core/icons/ky-nang-lap-trinh.png"
+                          alt=""
+                  />
+                </div>
+                <div class="inner-right">
+                  <div class="inner-titile">
+                    Cung cấp nhiều kỹ năng quan trọng
+                  </div>
+                  <div class="inner-desc">
+                    Khóa học cung cấp kỹ thuật lập trình, tư duy logic, cách giải
+                    quyết bài toán, thuật toán... Những kỹ năng sẽ theo bạn mãi
+                    trong học tập và công việc sau này.
+                  </div>
+                </div>
+              </div>
+              <div class="inner-box">
+                <div class="inner-icon">
+                  <img
+                          src="https://cdn-main.28tech.com.vn/media/core/icons/lap-trinh-vien.png"
+                          alt=""
+                  />
+                </div>
+                <div class="inner-right">
+                  <div class="inner-titile">
+                    Bước chuẩn bị vững chắc của một lập trình viên
+                  </div>
+                  <div class="inner-desc">
+                    Kỹ thuật lập trình là kỹ năng đầu tiên cần phải học khi bạn
+                    muốn trở thành một lập trình viên, việc học tốt kỹ thuật lập
+                    trình sẽ là bước đệm vững chắc cho sự nghiệp của bạn
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div th:replace="~{ClientTemplates/layout/footer :: footer}"></div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+    <script th:src="@{/ClientStatic/js/script.js}"></script>
+  </body>
+</html>

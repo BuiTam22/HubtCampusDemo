@@ -1,0 +1,177 @@
+.section-one {
+/* padding: 30px 0;*/
+background-color: #F3F3F3;
+}
+
+.inner-box {
+background-color: #fff;
+border-radius: 8px;
+overflow: hidden;
+padding: 20px;
+color: black;
+margin-top:30px;
+}
+
+.custom-table {
+width: 100%;
+border-collapse: collapse;
+}
+
+.custom-table thead th {
+text-align: center;
+padding: 15px 0;
+font-weight: 600;
+color: black;
+}
+
+.custom-table tbody td {
+text-align: center;
+padding: 15px 0;
+border-top: 1px solid #333;
+font-size: 14px;
+}
+
+.result-false {
+color: #ff4d4d;
+font-weight: 500;
+}
+.result-true {
+color: green;
+font-weight: 500;
+}
+.result-text i {
+margin-right: 5px;
+}
+
+.view-results {
+color: #4f8cff;
+font-weight: 500;
+cursor: pointer;
+transition: 0.3s;
+white-space: nowrap;
+}
+
+.view-results:hover {
+text-decoration: underline;
+}
+.help-box {
+background-color: #fff;
+padding: 20px;
+border-radius: 8px;
+color: black;
+margin-top: 30px;
+}
+
+.help-title {
+font-size: 14px;
+text-transform: uppercase;
+letter-spacing: 1px;
+margin-bottom: 10px;
+color: black;
+}
+
+.help-links {
+display: flex;
+flex-direction: column;
+}
+
+.help-link {
+display: flex;
+align-items: center;
+color: #4f8cff;
+text-decoration: none;
+margin-bottom: 10px;
+font-size: 16px;
+}
+
+.help-link i {
+margin-right: 8px;
+font-size: 18px;
+color: black;
+}
+
+.help-link:hover {
+text-decoration: underline;
+}
+hr {
+border: none;
+height: 2px;
+background-color: black;
+margin: 20px 0;
+opacity: 0.2;
+width: 100%;
+}
+.inner-head{
+  padding: 10px;
+  background: #f5f5f5;
+  margin-top: 110px;
+}
+.inner-title{
+  font-size: 30px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+
+/*css cho result detail*/
+.submission-detail {
+  margin: 20px 0;
+}
+
+.code-section pre {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 4px;
+    border: 1px solid #dee2e6;
+    margin: 0;
+}
+
+.code-section code {
+  white-space: pre-wrap;
+  word-break: break-all;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+}
+
+.submission-detail .card-header {
+    background: #4f8cff !important;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+.submission-detail .card {
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.code-section {
+    background: #f8f9fa;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    margin-top: 15px;
+}
+
+.code-section pre::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.code-section pre::-webkit-scrollbar-thumb {
+    background: #cccccc;
+    border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+    .submission-detail .row > div {
+        margin-bottom: 1rem;
+    }
+
+    .code-section pre {
+        font-size: 12px;
+    }
+}it st
+/*end css cho result detail*/
+
+
