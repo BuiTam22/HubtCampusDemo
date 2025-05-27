@@ -33,7 +33,7 @@ public class EssaySubmission {
 
     // ĐIỂM CỦA BÀI ĐÓ
     @Column(name = "Score", nullable = true)
-    private Integer score = 0;
+    private Double score = 0.0;
 
     // FEEDBACK CỦA GIẢNG VIÊN
     @Column(name = "Feedback", nullable = true)
@@ -42,7 +42,7 @@ public class EssaySubmission {
     public EssaySubmission() {
     }
 
-    public EssaySubmission(EssayExercise exercise, User user, String answerText, LocalDateTime submittedAt, Integer score, String feedback) {
+    public EssaySubmission(EssayExercise exercise, User user, String answerText, LocalDateTime submittedAt, Double score, String feedback) {
         this.exercise = exercise;
         this.user = user;
         this.answerText = answerText;
@@ -87,11 +87,11 @@ public class EssaySubmission {
         this.submittedAt = submittedAt;
     }
 
-    public Integer getScore() {
+    public Double getScore() {
         return score;
     }
 
-    public void setScore(Integer score) {
+    public void setScore(Double score) {
         this.score = score;
     }
 
@@ -101,5 +101,18 @@ public class EssaySubmission {
 
     public void setFeedback(String feedback) {
         this.feedback = feedback;
+    }
+
+    @Override
+    public String toString() {
+        return "EssaySubmission{" +
+                "submissionID=" + submissionID +
+                ", exercise=" + exercise +
+                ", user=" + user +
+                ", answerText='" + answerText + '\'' +
+                ", submittedAt=" + submittedAt +
+                ", score=" + score +
+                ", feedback='" + feedback + '\'' +
+                '}';
     }
 }

@@ -85,7 +85,7 @@ body {
 }
 .section-two .inner-wrap .inner-right .inner-title{
   font-size: 20px;
-  color:#C1C2D6 ;
+  color:#858697 ;
   padding-bottom: 5px;
 }
 .status-checkbox {
@@ -124,7 +124,7 @@ body {
   top: 1px;
 }
 .label-text {
-  color: white;
+  color: black;
   font-size: 14px;
 }
 .line {

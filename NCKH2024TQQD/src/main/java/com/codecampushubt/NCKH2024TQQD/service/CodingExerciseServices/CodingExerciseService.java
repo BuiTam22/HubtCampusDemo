@@ -14,4 +14,8 @@ public interface CodingExerciseService {
     CodingExerciseDetailDTO getCodingExerciseDetailDTOByExerciseSlug(String theSlug);
 
     CodingExercise getExerciseEntityByID(Long exerciseID);
+
+    boolean isExerciseInContestLesson(Long exerciseID);
+
+    Long getLessonIDByExerciseID(Long exerciseID);
 }

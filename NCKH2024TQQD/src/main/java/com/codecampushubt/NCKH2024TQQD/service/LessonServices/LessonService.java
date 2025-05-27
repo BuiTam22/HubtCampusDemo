@@ -5,6 +5,7 @@ import com.codecampushubt.NCKH2024TQQD.entity.CourseLesson;
 import org.springframework.data.repository.query.Param;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface LessonService {
     List<LessonShowDTO> getLessonShowDTO(Long theID);
@@ -16,4 +17,6 @@ public interface LessonService {
     List<ContestManagementShowDTO> getContestManagementShowDTO(Long moduleID, String userName);
     CourseLesson save(CourseLesson theLesson);
     EditLessonDTO getEditLessonDTO(Long moduleID, String theSlug);
+    Optional<CourseLesson> findById(Long id);
+
 }

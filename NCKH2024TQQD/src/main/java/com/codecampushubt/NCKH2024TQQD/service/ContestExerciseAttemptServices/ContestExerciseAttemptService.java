@@ -5,6 +5,6 @@ import com.codecampushubt.NCKH2024TQQD.entity.ContestExerciseAttempt;
 import org.springframework.data.repository.query.Param;
 
 public interface ContestExerciseAttemptService {
-    AttemptInfoDTO getAttemptInfoDTOByuserIDAndExerciseID(Long userID, Long exerciseID);
+    AttemptInfoDTO getAttemptInfoDTOByuserIDAndExerciseID(Long userID, Long exerciseID, String exerciseType);
     ContestExerciseAttempt save(ContestExerciseAttempt contestExerciseAttempt);
 }

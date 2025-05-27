@@ -4,8 +4,11 @@
     <meta charset="UTF-8" />
     <title>Blog</title>
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
     />
     <link
       rel="stylesheet"
@@ -16,489 +19,685 @@
     <link rel="stylesheet" th:href="@{/ClientStatic/css/base.css}" />
     <link rel="stylesheet" th:href="@{/ClientStatic/css/footer.css}" />
     <link rel="stylesheet" th:href="@{/ClientStatic/css/header.css}" />
-    <link rel="stylesheet" th:href="@{/ClientStatic/css/home.css}" />
-<!--    <link rel="stylesheet" th:href="@{/ClientStatic/css/style.css}" />-->
+    <link rel="stylesheet" th:href="@{/ClientStatic/css/blog.css}" />
   </head>
   <body>
     <div class="page-wrapper">
       <div th:replace="~{ClientTemplates/layout/header :: header}"></div>
       <div class="section-one">
-        <div class="inner-wrap">
-          <div class="inner-title">
-            CodeHUBT dream-winged patchwork
-          </div>
-          <div class="inner-desc">
-            CodeHUBT là hệ thống cung cấp những khóa học chất lượng cao về
-            lập trình với mục tiêu lớn nhất là giúp các bạn sinh viên IT phát
-            triển kiến thức, sự nghiệp !
-          </div>
-          <div class="inner-button">
-            <div class="button button-one">Các Khoá Học</div>
-            <div class="button button-two">Đăng Ký Ngay</div>
+        <div class="row">
+          <div class="inner-image">
+            <div class="col-xl-6">
+              <div class="inner-main">
+                <h1 class="inner-title">
+                  Join us & Explore <br />Thousands of Jobs
+                </h1>
+                <div class="inner-desc">
+                  Find Jobs, Employment & Career Opportunities. Enjoy custom
+                  hiring <br />
+                  products and access to up to 10,000 new resume registrations
+                  daily, <br />with no subscriptions or user licences.
+                </div>
+                <div class="inner-search">
+                  <input type="text" placeholder="Search this blog" />
+                  <button>Find Blog</button>
+                </div>
+                <div class="inner-menu">
+                  <a href="">Designer</a>
+                  <a href="">Developer</a>
+                  <a href="">Writing</a>
+                  <a href="">Tester</a>
+                  <a href="">Project Manager</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <div class="section-two">
-        <div class="container">
+        <div class="container-fluid mt-5 px-5">
           <div class="row">
-            <div class="col-12">
-              <div class="box-head">
-                <div class="inner-title">Khóa Học Tại CodeHUBT</div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xl-4 col-md-4 col-sm-6 col-12">
-              <div class="course-card">
-                <div class="inner-image">
-                  <a href=""
-                  ><img
-                          src="https://cdn-main.28tech.com.vn/thumbs/anh-khoa-hoc/anh_dai_dien_khoa_hoc/new/c%C6%A1%20s%E1%BB%9F%20d%E1%BB%AF%20li%E1%BB%87u%20v%C3%A0%20sql_thumb_500.png"
-                          alt=""
-                  /></a>
-                </div>
+            <div class="col-xl-2">
+              <a href="">
                 <div class="inner-content">
-                  <div class="inner-assess">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <p>(120 Đánh Giá)</p>
-                  </div>
-                  <div class="inner-title">Cơ Sở Dữ Liệu Và SQL</div>
-                  <div class="inner-info">
-                    <img
-                            src="https://th.bing.com/th/id/OIP.x0GBD5wzzx3MV8mdcuCojwHaKV?w=211&h=295&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"
-                            alt=""
-                    />
-                    <div class="inner-owner">Đội Ngũ HUBT</div>
-                  </div>
-                  <div class="inner-price">
-                    <div class="price-new">2,400,000<span>đ</span></div>
-                    <div class="price-old">6,000,000<span>đ</span></div>
-                  </div>
+                  <i class="fa-solid fa-volume-high"></i>
+                  <p class="inner-title">Marketing</p>
+                  <p class="inner-desc">(5 Job Positions)</p>
                 </div>
-              </div>
+              </a>
             </div>
-            <div class="col-xl-4 col-md-4 col-sm-6 col-12">
-              <div class="course-card">
-                <div class="inner-image">
-                  <a href=""
-                  ><img
-                          src="https://cdn-main.28tech.com.vn/thumbs/anh-khoa-hoc/anh_dai_dien_khoa_hoc/new/c%C6%A1%20s%E1%BB%9F%20d%E1%BB%AF%20li%E1%BB%87u%20v%C3%A0%20sql_thumb_500.png"
-                          alt=""
-                  /></a>
-                </div>
+            <div class="col-xl-2">
+              <a href="">
                 <div class="inner-content">
-                  <div class="inner-assess">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <p>(120 Đánh Giá)</p>
-                  </div>
-                  <div class="inner-title">Cơ Sở Dữ Liệu Và SQL</div>
-                  <div class="inner-info">
-                    <img
-                            src="https://th.bing.com/th/id/OIP.x0GBD5wzzx3MV8mdcuCojwHaKV?w=211&h=295&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"
-                            alt=""
-                    />
-                    <div class="inner-owner">Đội Ngũ HUBT</div>
-                  </div>
-                  <div class="inner-price">
-                    <div class="price-new">2,400,000<span>đ</span></div>
-                    <div class="price-old">6,000,000<span>đ</span></div>
-                  </div>
+                  <i class="fa-solid fa-pen-nib"></i>
+                  <p class="inner-title">Design</p>
+                  <p class="inner-desc">(7 Job Positions)</p>
                 </div>
-              </div>
+              </a>
             </div>
-            <div class="col-xl-4 col-md-4 col-sm-6 col-12">
-              <div class="course-card">
-                <div class="inner-image">
-                  <a href=""
-                  ><img
-                          src="https://cdn-main.28tech.com.vn/thumbs/anh-khoa-hoc/anh_dai_dien_khoa_hoc/new/c%C6%A1%20s%E1%BB%9F%20d%E1%BB%AF%20li%E1%BB%87u%20v%C3%A0%20sql_thumb_500.png"
-                          alt=""
-                  /></a>
-                </div>
+            <div class="col-xl-2">
+              <a href="">
                 <div class="inner-content">
-                  <div class="inner-assess">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <p>(120 Đánh Giá)</p>
-                  </div>
-                  <div class="inner-title">Cơ Sở Dữ Liệu Và SQL</div>
-                  <div class="inner-info">
-                    <img
-                            src="https://th.bing.com/th/id/OIP.x0GBD5wzzx3MV8mdcuCojwHaKV?w=211&h=295&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"
-                            alt=""
-                    />
-                    <div class="inner-owner">Đội Ngũ HUBT</div>
-                  </div>
-                  <div class="inner-price">
-                    <div class="price-new">2,400,000<span>đ</span></div>
-                    <div class="price-old">6,000,000<span>đ</span></div>
-                  </div>
+                  <i class="fa-solid fa-laptop-code"></i>
+                  <p class="inner-title">Development</p>
+                  <p class="inner-desc">(6 Job Positions)</p>
                 </div>
-              </div>
+              </a>
             </div>
-            <div class="col-xl-4 col-md-4 col-sm-6 col-12">
-              <div class="course-card">
-                <div class="inner-image">
-                  <a href=""
-                  ><img
-                          src="https://cdn-main.28tech.com.vn/thumbs/anh-khoa-hoc/anh_dai_dien_khoa_hoc/new/c%C6%A1%20s%E1%BB%9F%20d%E1%BB%AF%20li%E1%BB%87u%20v%C3%A0%20sql_thumb_500.png"
-                          alt=""
-                  /></a>
-                </div>
+            <div class="col-xl-2">
+              <a href="">
                 <div class="inner-content">
-                  <div class="inner-assess">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <p>(120 Đánh Giá)</p>
-                  </div>
-                  <div class="inner-title">Cơ Sở Dữ Liệu Và SQL</div>
-                  <div class="inner-info">
-                    <img
-                            src="https://th.bing.com/th/id/OIP.x0GBD5wzzx3MV8mdcuCojwHaKV?w=211&h=295&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"
-                            alt=""
-                    />
-                    <div class="inner-owner">Đội Ngũ HUBT</div>
-                  </div>
-                  <div class="inner-price">
-                    <div class="price-new">2,400,000<span>đ</span></div>
-                    <div class="price-old">6,000,000<span>đ</span></div>
-                  </div>
+                  <i class="fa-solid fa-phone-flip"></i>
+                  <p class="inner-title">Customer Service</p>
+                  <p class="inner-desc">(4 Job Positions)</p>
                 </div>
-              </div>
+              </a>
+            </div>
+            <div class="col-xl-2">
+              <a href="">
+                <div class="inner-content">
+                  <i class="fa-solid fa-laptop-medical"></i>
+                  <p class="inner-title">Health & Care</p>
+                  <p class="inner-desc">(3 Job Positions)</p>
+                </div>
+              </a>
+            </div>
+            <div class="col-xl-2">
+              <a href="">
+                <div class="inner-content">
+                  <i class="fa-solid fa-screwdriver-wrench"></i>
+                  <p class="inner-title">Automotive Service</p>
+                  <p class="inner-desc">(1 Job Position)</p>
+                </div>
+              </a>
             </div>
           </div>
         </div>
       </div>
       <div class="section-three">
-        <div class="container">
+        <div class="container-fluid mt-5 px-5">
           <div class="row">
-            <div class="col-xl-5">
-              <div class="inner-image">
-                <img
-                        src="https://cdn-main.28tech.com.vn/media/anh-khoa-hoc/lo_trinh_khoa_hoc/dai_dien1.png"
-                        alt=""
-                />
-                <div class="inner-image-small">
-                  <img
-                          nh-lazy="image"
-                          src="https://cdn-main.28tech.com.vn/media/core/icons/advisor-sm-1.svg"
-                          style=""
-                  />
-                </div>
-                <div class="inner-noname">
-                  <div class="inner-icon">
-                    <i class="fa-solid fa-book-open"></i>
-                  </div>
-                  <div class="inner-name">HUBT</div>
-                </div>
+            <div class="inner-image">
+              <div class="inner-content">
+                <h1 class="inner-title">Find out more about what we do</h1>
+                <p class="inner-desc">
+                  It is a long established fact that a reader will be distracted
+                  by the readable content of a page when looking at its layout.
+                  The point of using Lorem Ipsum is that it has a more-or-less
+                  normal distribution of letters, as opposed to using 'Content
+                  here, content here', making it look like readable English. Lorem
+                  Ipsum is simply dummy text of the printing and typesetting
+                  industry. Lorem Ipsum has been the industry's standard dummy
+                  text ever since. Lorem Ipsum is simply dummy text of the
+                  printing and typesetting industry. Lorem Ipsum has been the
+                  industry's standard dummy text ever since.
+                </p>
+                <div class="inner-btn"><button>Learn Methods</button></div>
               </div>
-            </div>
-            <div class="col-xl-7">
-              <div class="box-head">
-                <div class="inner-title">Về CodeHUBT</div>
-              </div>
-              <div class="inner-desc">
-                CodeHUBT nền tảng được xây dựng bởi một đội nhóm gồm các sinh viên hiện đang học ở Trường Đại học Kinh doanh và Công nghệ Hà nội nhưng có chung niềm đam mê với công nghệ
-                và chia sẻ kiến thức.
-              </div>
-              <div class="inner-desc">
-                CodeHUBT luôn cố gắng đổi mới, trau dồi kỹ năng, đón nhận đóng góp,
-                khắc phục những điểm chưa tốt để mang đến cho các bạn học viên
-                những khóa học lập trình với chất lượng cao nhất
-              </div>
-              <div class="inner-detail">
-                <div class="inner-icon">
-                  <i class="fa-regular fa-circle-check"></i>
-                </div>
-                <div class="inner-title">Giảng viên giàu kinh nghiệm</div>
-              </div>
-              <div class="inner-detail">
-                <div class="inner-icon">
-                  <i class="fa-regular fa-circle-check"></i>
-                </div>
-                <div class="inner-title">Bài giảng và bài tập chất lượng</div>
-              </div>
-              <a href="">
-                <div class="button-course">
-                  <p>Danh Sách Khoá Học</p>
-                  <i class="fa-solid fa-arrow-right"></i>
-                </div>
-              </a>
             </div>
           </div>
         </div>
       </div>
-
       <div class="section-four">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <div class="box-head">
-                <div class="inner-title">Danh Mục Nổi Bật</div>
-              </div>
+        <div class="container-fluid px-5">
+          <div class="row pb-0">
+            <div class="col">
+              <a href=""
+              ><div class="inner-item">
+                <div class="inner-title">Human Resource</div>
+                <div class="inner-desc">120 Jobs available</div>
+                <a href=""><div class="inner-know-more">Know more ></div></a>
+              </div></a
+              >
+            </div>
+            <div class="col">
+              <a href=""
+              ><div class="inner-item">
+                <div class="inner-title">Project Manager</div>
+                <div class="inner-desc">139 Jobs available</div>
+                <a href=""><div class="inner-know-more">Know more ></div></a>
+              </div></a
+              >
+            </div>
+            <div class="col">
+              <a href=""
+              ><div class="inner-item">
+                <div class="inner-title">Delivery Driver</div>
+                <div class="inner-desc">260 Jobs available</div>
+                <a href=""><div class="inner-know-more">Know more ></div></a>
+              </div></a
+              >
+            </div>
+            <div class="col">
+              <a href=""
+              ><div class="inner-item">
+                <div class="inner-title">Accounting</div>
+                <div class="inner-desc">97 Jobs available</div>
+                <a href=""><div class="inner-know-more">Know more ></div></a>
+              </div></a
+              >
+            </div>
+            <div class="col">
+              <a href=""
+              ><div class="inner-item">
+                <div class="inner-title">Customer Service</div>
+                <div class="inner-desc">364 Jobs available</div>
+                <a href=""><div class="inner-know-more">Know more ></div></a>
+              </div></a
+              >
             </div>
           </div>
-          <div class="row justify-content-center">
-<!--            <div class="col-xl-3">-->
-<!--              <a href="">-->
-<!--                <div class="inner-box">-->
-<!--                  <img-->
-<!--                          src="https://cdn-main.28tech.com.vn/media/core/icons/zoom.png"-->
-<!--                          alt=""-->
-<!--                  />-->
-<!--                  <div class="inner-title">Khoá Học Zoom</div>-->
-<!--                  <div class="inner-desc">7 Khoá Học</div>-->
-<!--                </div>-->
-<!--              </a>-->
-<!--            </div>-->
-<!--            <div class="col-xl-3">-->
-<!--              <a href="">-->
-<!--                <div class="inner-box">-->
-<!--                  <img-->
-<!--                          src="https://cdn-main.28tech.com.vn/media/core/icons/onlinelearning.png"-->
-<!--                          alt=""-->
-<!--                  />-->
-<!--                  <div class="inner-title">Khoá Học Video</div>-->
-<!--                  <div class="inner-desc">2 Khoá Học</div>-->
-<!--                </div>-->
-<!--              </a>-->
-<!--            </div>-->
-            <div class="col-xl-3">
-              <a href="">
-                <div class="inner-box">
-                  <img
-                          src="https://cdn-main.28tech.com.vn/media/core/icons/blog.png"
-                          alt=""
-                  />
-                  <div class="inner-title">Blog Lập Trình</div>
-                  <div class="inner-desc">100+ Bài Viết</div>
-                </div>
-              </a>
+          <div class="row">
+            <div class="col">
+              <a href=""
+              ><div class="inner-item">
+                <div class="inner-title">Data Science</div>
+                <div class="inner-desc">187 Jobs available</div>
+                <a href=""><div class="inner-know-more">Know more ></div></a>
+              </div></a
+              >
             </div>
-            <div class="col-xl-3">
-              <a href="">
-                <div class="inner-box">
-                  <img
-                          src="https://cdn-main.28tech.com.vn/media/core/icons/fb.png"
-                          alt=""
-                  />
-                  <div class="inner-title">Fanpage Facebook</div>
-                  <div class="inner-desc">24.500+ Theo Dõi</div>
-                </div>
-              </a>
+            <div class="col">
+              <a href=""
+              ><div class="inner-item">
+                <div class="inner-title">Engineering</div>
+                <div class="inner-desc">427 Jobs available</div>
+                <a href=""><div class="inner-know-more">Know more ></div></a>
+              </div></a
+              >
             </div>
-            <div class="col-xl-3">
-              <a href="">
-                <div class="inner-box">
-                  <img
-                          src="https://cdn-main.28tech.com.vn/media/core/icons/youtube%20(1).png"
-                          alt=""
-                  />
-                  <div class="inner-title">Kênh Youtobe</div>
-                  <div class="inner-desc">66.500+ Theo Dõi</div>
-                </div>
-              </a>
+            <div class="col">
+              <a href=""
+              ><div class="inner-item">
+                <div class="inner-title">IT & Networking</div>
+                <div class="inner-desc">69 Jobs available</div>
+                <a href=""><div class="inner-know-more">Know more ></div></a>
+              </div></a
+              >
             </div>
-            <div class="col-xl-3">
-              <a href="">
-                <div class="inner-box">
-                  <img
-                          src="https://cdn-main.28tech.com.vn/media/core/icons/tiktok%20(1).png"
-                          alt=""
-                  />
-                  <div class="inner-title">Kênh TikTok</div>
-                  <div class="inner-desc">40.000+ Theo Dõi</div>
-                </div>
-              </a>
+            <div class="col">
+              <a href=""
+              ><div class="inner-item">
+                <div class="inner-title">Sales & Marketing</div>
+                <div class="inner-desc">147 Jobs available</div>
+                <a href=""><div class="inner-know-more">Know more ></div></a>
+              </div></a
+              >
+            </div>
+            <div class="col">
+              <a href=""
+              ><div class="inner-item">
+                <div class="inner-title">Writing</div>
+                <div class="inner-desc">113 Jobs available</div>
+                <a href=""><div class="inner-know-more">Know more ></div></a>
+              </div></a
+              >
             </div>
           </div>
         </div>
       </div>
       <div class="section-five">
-        <div class="container">
+        <div class="container-fluid px-5">
           <div class="row">
-            <div class="col-12">
-              <div class="box-head">
-                <div class="inner-title">Cảm nhận của học viên</div>
-              </div>
+            <div class="col-xl-12">
+              <h3 class="inner-desc">
+                Trusted by 25,000+ world-class brands and <br />
+                organizations of all sizes
+              </h3>
             </div>
           </div>
           <div class="row">
-            <div class="col-xl-4">
-              <div class="inner-box">
-                <div class="inner-head">
-                  <div class="avatar">
+            <section class="brand-section">
+              <div class="brand-scroll-container" id="brandScroll">
+                <div class="brand-logos-wrapper">
+                  <div class="brand-logos">
                     <img
-                            src="https://cdn-main.28tech.com.vn/media/core/icons/user.png"
-                            alt=""
+                            src="https://www.saokim.com.vn/blog/wp-content/uploads/2019/03/Tottenham-Hotspur-logo-copy.jpg.webp"
+                            class="brand-logo"
+                            alt="Logo 1"
+                    />
+                    <img
+                            src="https://www.saokim.com.vn/blog/wp-content/uploads/2019/03/Real-Madrid-logo-copy.jpg.webp"
+                            class="brand-logo"
+                            alt="Logo 2"
+                    />
+                    <img
+                            src="https://www.saokim.com.vn/blog/wp-content/uploads/2019/03/PSG-logo-copy.jpg.webp"
+                            class="brand-logo"
+                            alt="Logo 3"
+                    />
+                    <img
+                            src="https://www.saokim.com.vn/blog/wp-content/uploads/2019/03/manchester-united-logo-png-transparent.jpg.webp"
+                            class="brand-logo"
+                            alt="Logo 4"
+                    />
+                    <img
+                            src="https://www.saokim.com.vn/blog/wp-content/uploads/2019/03/manchester-city-logo.jpg.webp"
+                            class="brand-logo"
+                            alt="Logo 5"
+                    />
+                    <img
+                            src="https://www.saokim.com.vn/blog/wp-content/uploads/2019/03/Logo-Borussia-Dortmund-copy.jpg.webp"
+                            class="brand-logo"
+                            alt="Logo 6"
+                    />
+                    <img
+                            src="https://www.saokim.com.vn/blog/wp-content/uploads/2019/03/Liverpool-logo.jpg.webp"
+                            class="brand-logo"
+                            alt="Logo 7"
                     />
                   </div>
-                  <div class="inner-info">
-                    <div class="inner-name">Trần Nhật Nam</div>
-                    <div class="inner-course">Lập Trình C+= và Java</div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+      <div class="section-six">
+        <div class="container-fluid px-5">
+          <div class="row">
+            <div class="col-xl-3">
+              <div class="inner-main">
+                <a href=""
+                ><img
+                        src="https://1.bp.blogspot.com/-bHo31vhlrHo/YVk8LGb-1pI/AAAAAAAAITA/MxqsLMuF-mwWT5GlLJJoBVtTmhuetN_vQCLcBGAsYHQ/w377-h220-p-k-no-nu/54%2B%25281%2529.jpg"
+                        alt=""
+                /></a>
+                <p class="inner-category">Design</p>
+                <p class="inner-content">
+                  <a href=""
+                  >Mexico’s President Is Considering Raffling Off The
+                    Presidential Jet</a
+                  >
+                </p>
+                <div class="inner-info">
+                  <div class="info-user">
+                    <i class="fa-solid fa-user"></i>
+                    <div class="name">Tambui</div>
                   </div>
-                </div>
-                <div class="inner-describe">
-                  “Khóa học quá đỉnh, quá chất lượng, quá dễ hiểu quá tuyệt vời;
-                  Thật không thể tin được !!!. Giảng viên siêu dễ thương, hài
-                  hước, gần gũi, dạy dễ hiểu và hỗ trợ nhiệt tình. Hiện tại mình
-                  đang tham gia khóa Java và C++ cơ bản đến nâng cao, cảm thấy rất
-                  đáng đồng tiền và bát gạo tuy học phí rất phải chăng”
-                </div>
-                <div class="inner-star">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
+                  <div class="info-time">
+                    <i class="fa-regular fa-clock"></i>
+                    <div class="date">March 17,2024</div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-xl-4">
-              <div class="inner-box">
-                <div class="inner-head">
-                  <div class="avatar">
-                    <img
-                            src="https://cdn-main.28tech.com.vn/media/core/icons/user.png"
-                            alt=""
-                    />
+            <div class="col-xl-3">
+              <div class="inner-main">
+                <a href=""
+                ><img
+                        src="https://1.bp.blogspot.com/-_hvpEzVgzsQ/YVk8LWH4U7I/AAAAAAAAITI/1RK0agh4hW0GxWHDsRyzznjMTuGFupQtACLcBGAsYHQ/w377-h220-p-k-no-nu/56%2B%25281%2529.jpg"
+                        alt=""
+                /></a>
+                <p class="inner-category">Design</p>
+                <p class="inner-content">
+                  <a href=""
+                  >Greta Thunberg Joins Youth Activists On TIME Panel At
+                    Davos</a
+                  >
+                </p>
+                <div class="inner-info">
+                  <div class="info-user">
+                    <i class="fa-solid fa-user"></i>
+                    <div class="name">Tambui</div>
                   </div>
-                  <div class="inner-info">
-                    <div class="inner-name">Trần Nhật Nam</div>
-                    <div class="inner-course">Lập Trình C+= và Java</div>
+                  <div class="info-time">
+                    <i class="fa-regular fa-clock"></i>
+                    <div class="date">March 17,2024</div>
                   </div>
-                </div>
-                <div class="inner-describe">
-                  “Khóa học quá đỉnh, quá chất lượng, quá dễ hiểu quá tuyệt vời;
-                  Thật không thể tin được !!!. Giảng viên siêu dễ thương, hài
-                  hước, gần gũi, dạy dễ hiểu và hỗ trợ nhiệt tình. Hiện tại mình
-                  đang tham gia khóa Java và C++ cơ bản đến nâng cao, cảm thấy rất
-                  đáng đồng tiền và bát gạo tuy học phí rất phải chăng”
-                </div>
-                <div class="inner-star">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
                 </div>
               </div>
             </div>
-            <div class="col-xl-4">
-              <div class="inner-box">
-                <div class="inner-head">
-                  <div class="avatar">
-                    <img
-                            src="https://cdn-main.28tech.com.vn/media/core/icons/user.png"
-                            alt=""
-                    />
+            <div class="col-xl-3">
+              <div class="inner-main">
+                <a href="">
+                  <img
+                          src="https://1.bp.blogspot.com/-8j2tNx6A3Fs/YVk8LUn0eeI/AAAAAAAAITE/viU2po0xWTcGZBns5uHIc1wiO2LWXi8oACLcBGAsYHQ/w377-h220-p-k-no-nu/55%2B%25281%2529.jpg"
+                          alt=""
+                  />
+                </a>
+                <p class="inner-category">Design</p>
+                <p class="inner-content">
+                  <a href=""
+                  >Mexico’s President Is Considering Raffling Off The
+                    Presidential Jet</a
+                  >
+                </p>
+                <div class="inner-info">
+                  <div class="info-user">
+                    <i class="fa-solid fa-user"></i>
+                    <div class="name">Tambui</div>
                   </div>
-                  <div class="inner-info">
-                    <div class="inner-name">Trần Nhật Nam</div>
-                    <div class="inner-course">Lập Trình C+= và Java</div>
+                  <div class="info-time">
+                    <i class="fa-regular fa-clock"></i>
+                    <div class="date">March 17,2024</div>
                   </div>
                 </div>
-                <div class="inner-describe">
-                  “Khóa học quá đỉnh, quá chất lượng, quá dễ hiểu quá tuyệt vời;
-                  Thật không thể tin được !!!. Giảng viên siêu dễ thương, hài
-                  hước, gần gũi, dạy dễ hiểu và hỗ trợ nhiệt tình. Hiện tại mình
-                  đang tham gia khóa Java và C++ cơ bản đến nâng cao, cảm thấy rất
-                  đáng đồng tiền và bát gạo tuy học phí rất phải chăng”
-                </div>
-                <div class="inner-star">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+            <div class="col-xl-3">
+              <div class="inner-main">
+                <a href=""
+                ><img
+                        src="https://1.bp.blogspot.com/-UOyxh-0tURA/YVk8L9J-DBI/AAAAAAAAITM/QwYX3G1jcBsBEVpKaqQkU26UsTLofrFBwCLcBGAsYHQ/w377-h220-p-k-no-nu/57%2B%25281%2529.jpg"
+                        alt=""
+                /></a>
+                <p class="inner-category">Design</p>
+                <p class="inner-content">
+                  <a href=""
+                  >Mexico’s President Is Considering Raffling Off The
+                    Presidential Jet</a
+                  >
+                </p>
+                <div class="inner-info">
+                  <div class="info-user">
+                    <i class="fa-solid fa-user"></i>
+                    <div class="name">Tambui</div>
+                  </div>
+                  <div class="info-time">
+                    <i class="fa-regular fa-clock"></i>
+                    <div class="date">March 17,2024</div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="section-six">
-        <div class="container">
+      <div class="section-seven">
+        <div class="container-fluid px-5">
           <div class="row">
-            <div class="col-12">
-              <div class="box-head">
-                <div class="inner-title">Tại sao bạn nên học với CodeHubt</div>
+            <div class="col-xl-12">
+              <div class="inner-header">
+                <h3 class="inner-title">What our clients say</h3>
+                <p class="inner-description">
+                  Lorem Ipsum has been the industry's standard dummy text.
+                </p>
               </div>
             </div>
           </div>
           <div class="row">
-            <div class="col-xl-5">
+            <div class="col-xl-6">
               <img
-                      src="https://cdn-main.28tech.com.vn/media/anh-khoa-hoc/lo_trinh_khoa_hoc/dai_dien2.png"
+                      src="https://blogger.googleusercontent.com/img/a/AVvXsEg-wYYOfVM-qyZESDn_sTmbQY1O8ysWInvMOl8Tr7VTL0uAilvb_xkkSdkHrUNYUv1IaZGVkS-Kj5wqMh22CcJGpbt3Djigo_XULdmlz-kYQoQubq0dYqGDJe91vZFuiNnq3eGEM67ZMfdgi3bhRaAsnY8t-EFZhiNLgVG4mb1oUTitEUdW8csq6EIZcHW2=s736"
                       alt=""
               />
             </div>
-            <div class="col-xl-7">
+            <div class="col-xl-6">
               <div class="inner-box">
-                <div class="inner-icon">
-                  <img
-                          src="https://cdn-main.28tech.com.vn/media/core/icons/chat-luong-cao.png"
-                          alt=""
-                  />
+                <div class="inner-item">
+                  <div class="icon-Awesome">
+                    <i class="fa-solid fa-id-card"></i>
+                  </div>
+                  <div class="box-content">
+                    <h3 class="title">Awesome design</h3>
+                    <p class="desc">
+                      Duis aute irure dolor reprehen derit in volu velit.
+                    </p>
+                  </div>
                 </div>
-                <div class="inner-right">
-                  <div class="inner-titile">Chất lượng cao</div>
-                  <div class="inner-desc">
-                    Nội dung của khóa học được đầu tư cả về chất và lượng, giáo
-                    viên có kinh nghiệm và cực kỳ tâm huyết với công việc giảng
-                    dạy.
+                <div class="inner-item">
+                  <div class="icon-Easy">
+                    <i class="fa-solid fa-swatchbook"></i>
+                  </div>
+                  <div class="box-content">
+                    <h3 class="title">Easy Customization</h3>
+                    <p class="desc">
+                      Duis aute irure dolor reprehen derit in volu velit.
+                    </p>
                   </div>
                 </div>
               </div>
-              <div class="inner-box">
-                <div class="inner-icon">
-                  <img
-                          src="https://cdn-main.28tech.com.vn/media/core/icons/ky-nang-lap-trinh.png"
-                          alt=""
-                  />
-                </div>
-                <div class="inner-right">
-                  <div class="inner-titile">
-                    Cung cấp nhiều kỹ năng quan trọng
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-eight">
+        <div class="container-fluid px-5">
+          <div class="row">
+            <div class="col-xl-9">
+              <div class="row">
+                <div class="col-xl-4">
+                  <div class="inner-box">
+                    <a href=""
+                    ><img
+                            src="https://1.bp.blogspot.com/-6TGsIPqr6cE/YVk8KKa5z_I/AAAAAAAAIS0/Ih9BBgjUC9Me0MpuEgQ831gPORIdBxFlwCLcBGAsYHQ/w349-h248-p-k-no-nu/51%2B%25281%2529.jpg"
+                            alt=""
+                    /></a>
+                    <div class="inner-category"><a href="">CODING</a></div>
+                    <div class="inner-content">
+                      <a href=""
+                      >Warren And Sanders Spar On Gender Issues At Iowa
+                        Debate</a
+                      >
+                    </div>
+                    <div class="inner-info">
+                      <div class="info-user">
+                        <i class="fa-solid fa-user"></i>
+                        <div class="name"><a href="">Tambui</a></div>
+                      </div>
+                      <div class="info-time">
+                        <i class="fa-regular fa-clock"></i>
+                        <div class="date">March 17,2024</div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="inner-desc">
-                    Khóa học cung cấp kỹ thuật lập trình, tư duy logic, cách giải
-                    quyết bài toán, thuật toán... Những kỹ năng sẽ theo bạn mãi
-                    trong học tập và công việc sau này.
+                </div>
+                <div class="col-xl-4">
+                  <div class="inner-box">
+                    <a href=""
+                    ><img
+                            src="https://1.bp.blogspot.com/-lXn8WdgbomU/YVk8KPywFNI/AAAAAAAAIS4/JQjD9G4ZOj8bJMLq5b7htLOd5RV7uKt6gCLcBGAsYHQ/w349-h248-p-k-no-nu/53%2B%25281%2529.jpg"
+                            alt=""
+                    /></a>
+                    <div class="inner-category"><a href="">HOSTING</a></div>
+                    <div class="inner-content">
+                      <a href=""
+                      >The Week Ahead: Busiest Week Of Earnings Season</a
+                      >
+                    </div>
+                    <div class="inner-info">
+                      <div class="info-user">
+                        <i class="fa-solid fa-user"></i>
+                        <div class="name"><a href="">Manh-Nguyen</a></div>
+                      </div>
+                      <div class="info-time">
+                        <i class="fa-regular fa-clock"></i>
+                        <div class="date">March 17,2024</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-4">
+                  <div class="inner-box">
+                    <a href=""
+                    ><img
+                            src="https://1.bp.blogspot.com/-nDr3_rHDk0A/YVk8KRt26kI/AAAAAAAAIS8/BGB0zEApSeAVD6AUc6AEsGLS1y0PVCADwCLcBGAsYHQ/w349-h248-p-k-no-nu/52%2B%25281%2529.jpg"
+                            alt=""
+                    /></a>
+                    <div class="inner-category"><a href="">CODING</a></div>
+                    <div class="inner-content">
+                      <a href=""
+                      >Warren And Sanders Spar On Gender Issues At Iowa
+                        Debate</a
+                      >
+                    </div>
+                    <div class="inner-info">
+                      <div class="info-user">
+                        <i class="fa-solid fa-user"></i>
+                        <div class="name"><a href="">Rick</a></div>
+                      </div>
+                      <div class="info-time">
+                        <i class="fa-regular fa-clock"></i>
+                        <div class="date">March 17,2024</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="inner-box">
-                <div class="inner-icon">
-                  <img
-                          src="https://cdn-main.28tech.com.vn/media/core/icons/lap-trinh-vien.png"
-                          alt=""
-                  />
-                </div>
-                <div class="inner-right">
-                  <div class="inner-titile">
-                    Bước chuẩn bị vững chắc của một lập trình viên
+              <div class="row mt-4">
+                <div class="col-xl-4">
+                  <div class="inner-box">
+                    <a href=""
+                    ><img
+                            src="https://1.bp.blogspot.com/-UOyxh-0tURA/YVk8L9J-DBI/AAAAAAAAITM/QwYX3G1jcBsBEVpKaqQkU26UsTLofrFBwCLcBGAsYHQ/w349-h248-p-k-no-nu/57%2B%25281%2529.jpg"
+                            alt=""
+                    /></a>
+                    <div class="inner-category"><a href="">CODING</a></div>
+                    <div class="inner-content">
+                      <a href=""
+                      >Warren And Sanders Spar On Gender Issues At Iowa
+                        Debate</a
+                      >
+                    </div>
+                    <div class="inner-info">
+                      <div class="info-user">
+                        <i class="fa-solid fa-user"></i>
+                        <div class="name"><a href="">Tambui</a></div>
+                      </div>
+                      <div class="info-time">
+                        <i class="fa-regular fa-clock"></i>
+                        <div class="date">March 17,2024</div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="inner-desc">
-                    Kỹ thuật lập trình là kỹ năng đầu tiên cần phải học khi bạn
-                    muốn trở thành một lập trình viên, việc học tốt kỹ thuật lập
-                    trình sẽ là bước đệm vững chắc cho sự nghiệp của bạn
+                </div>
+                <div class="col-xl-4">
+                  <div class="inner-box">
+                    <a href=""
+                    ><img
+                            src="https://1.bp.blogspot.com/-6cEHJVeGlOg/YVk8MUDTrUI/AAAAAAAAITQ/6M83mAEE3RciALaTEcUQeHsi_mCtOu93ACLcBGAsYHQ/w349-h248-p-k-no-nu/58%2B%25281%2529.jpg"
+                            alt=""
+                    /></a>
+                    <div class="inner-category"><a href="">CODING</a></div>
+                    <div class="inner-content">
+                      <a href=""
+                      >Warren And Sanders Spar On Gender Issues At Iowa
+                        Debate</a
+                      >
+                    </div>
+                    <div class="inner-info">
+                      <div class="info-user">
+                        <i class="fa-solid fa-user"></i>
+                        <div class="name"><a href="">Tambui</a></div>
+                      </div>
+                      <div class="info-time">
+                        <i class="fa-regular fa-clock"></i>
+                        <div class="date">March 17,2024</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
+                <div class="col-xl-4">
+                  <div class="inner-box">
+                    <a href=""
+                    ><img
+                            src="https://1.bp.blogspot.com/-f1q6MM3pPcA/YVk8MoTUU5I/AAAAAAAAITU/6H8ABCjXPWIuTwZF_5tVR69oG5_kiIkvQCLcBGAsYHQ/w349-h248-p-k-no-nu/59%2B%25281%2529.jpg"
+                            alt=""
+                    /></a>
+                    <div class="inner-category"><a href="">CODING</a></div>
+                    <div class="inner-content">
+                      <a href=""
+                      >Warren And Sanders Spar On Gender Issues At Iowa
+                        Debate</a
+                      >
+                    </div>
+                    <div class="inner-info">
+                      <div class="info-user">
+                        <i class="fa-solid fa-user"></i>
+                        <div class="name"><a href="">Tambui</a></div>
+                      </div>
+                      <div class="info-time">
+                        <i class="fa-regular fa-clock"></i>
+                        <div class="date">March 17,2024</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="inner-btn">
+                <button>
+                  <div class="icon"><i class="fa-solid fa-rotate"></i></div>
+                  <p>LOAD MORE POSTS</p>
+                </button>
+              </div>
+            </div>
+            <div class="col-xl-3">
+              <div class="inner-social">
+                <div class="inner-title">Social Plugin</div>
+                <hr />
+                <div class="inner-media">
+                  <div class="row">
+                    <div class="col-xl">
+                      <a href="https://www.facebook.com/manh.889566" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                    </div>
+                    <div class="col-xl">
+                      <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                    <div class="col-xl">
+                      <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+                    </div>
+                    <div class="col-xl">
+                      <a href=""><i class="fa-brands fa-google-plus-g"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="inner-Popular">
+                <div class="inner-title">Popular Posts</div>
+                <hr />
+                <div class="inner-Posts">
+                  <a href="">
+                    <div class="inner-item">
+                      <img
+                              src="https://1.bp.blogspot.com/-bHo31vhlrHo/YVk8LGb-1pI/AAAAAAAAITA/MxqsLMuF-mwWT5GlLJJoBVtTmhuetN_vQCLcBGAsYHQ/w83-h66-p-k-no-nu/54%2B%25281%2529.jpg"
+                              alt=""
+                      />
+                      <div class="inner-desc">
+                        Mexico’s President Is Considering Raffling Off The
+                        Presidential Jet
+                      </div>
+                    </div>
+                  </a>
+                  <a href="">
+                    <div class="inner-item">
+                      <img
+                              src="https://1.bp.blogspot.com/-lXn8WdgbomU/YVk8KPywFNI/AAAAAAAAIS4/JQjD9G4ZOj8bJMLq5b7htLOd5RV7uKt6gCLcBGAsYHQ/w83-h66-p-k-no-nu/53%2B%25281%2529.jpg"
+                              alt=""
+                      />
+                      <div class="inner-desc">
+                        Japan’s Environment Minister Announces History-Making
+                        Personal Decision
+                      </div>
+                    </div>
+                  </a>
+                  <a href="">
+                    <div class="inner-item">
+                      <img
+                              src="https://1.bp.blogspot.com/-nDr3_rHDk0A/YVk8KRt26kI/AAAAAAAAIS8/BGB0zEApSeAVD6AUc6AEsGLS1y0PVCADwCLcBGAsYHQ/w83-h66-p-k-no-nu/52%2B%25281%2529.jpg"
+                              alt=""
+                      />
+                      <div class="inner-desc">
+                        The Week Ahead: Busiest Week Of Earnings Season
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="inner-follow">
+                <div class="inner-title">Subscribe Us</div>
+                <hr />
+                <iframe
+                        style="display: block; margin: 0 auto"
+                        width="300"
+                        height="200"
+                        src="https://www.youtube.com/embed/ELpoKqVSZ0U?si=IE_fq922f_hdvyZT"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen
+                ></iframe>
               </div>
             </div>
           </div>
@@ -518,5 +717,6 @@
       crossorigin="anonymous"
     ></script>
     <script th:src="@{/ClientStatic/js/script.js}"></script>
+    <script th:src="@{/ClientStatic/js/slide-image.js}"></script>
   </body>
 </html>

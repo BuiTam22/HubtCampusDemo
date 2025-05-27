@@ -38,4 +38,9 @@ public interface EssayExerciseRepository extends JpaRepository<EssayExercise, Lo
             WHERE ee.exerciseID = :theID
             """)
     String getExpectedAnswerOfEssayExerciseByExerciseID(@Param("theID") Long theID);
+
+    // LẤY RA LessonID dựa vào ExerciceID
+    @Query("SELECT ee.lesson.lessonID FROM EssayExercise ee WHERE ee.exerciseID = :exerciseID")
+    Long getLessonIDByExerciseID(@Param("exerciseID") Long exerciseID);
+
 }

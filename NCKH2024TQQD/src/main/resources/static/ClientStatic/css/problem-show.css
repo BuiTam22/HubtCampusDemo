@@ -72,7 +72,6 @@
 /* Monaco Editor Container */
 #editor {
   height: 500px;
-  padding: 10px;
   font-family: monospace;
 }
 .editor.essay-editor {

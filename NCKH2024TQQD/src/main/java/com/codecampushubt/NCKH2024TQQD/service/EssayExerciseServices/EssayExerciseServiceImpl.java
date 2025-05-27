@@ -31,4 +31,9 @@ public class EssayExerciseServiceImpl implements EssayExerciseService{
     public String getExpectedAnswerOfEssayExerciseByExerciseID(Long theID) {
         return essayExerciseRepository.getExpectedAnswerOfEssayExerciseByExerciseID(theID);
     }
+
+    @Override
+    public Long getLessonIDByExerciseID(Long exerciseID) {
+        return essayExerciseRepository.getLessonIDByExerciseID(exerciseID);
+    }
 }

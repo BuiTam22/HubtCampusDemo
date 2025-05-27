@@ -14,9 +14,8 @@ public class ContestExerciseAttempt {
     @Column(name = "AttemptID")
     private Long attemptID;
 
-    @ManyToOne
-    @JoinColumn(name = "ExerciseID", nullable = false)
-    private CodingExercise exercise;
+    @Column(name = "ExerciseID", nullable = false)
+    private Long exerciseID;
 
     @ManyToOne
     @JoinColumn(name = "LessonID", nullable = false)
@@ -30,7 +29,7 @@ public class ContestExerciseAttempt {
     private LocalDateTime submittedAt = LocalDateTime.now();
 
     @Column(name = "Score")
-    private Integer score;
+    private Double score;
 
     @Column(name = "ExerciseType")
     private String exerciseType;
@@ -43,8 +42,8 @@ public class ContestExerciseAttempt {
     public ContestExerciseAttempt() {
     }
 
-    public ContestExerciseAttempt(CodingExercise exercise, CourseLesson lesson, User user, LocalDateTime submittedAt, Integer score, String exerciseType, Integer attemptNumber) {
-        this.exercise = exercise;
+    public ContestExerciseAttempt(Long exerciseID, CourseLesson lesson, User user, LocalDateTime submittedAt, Double score, String exerciseType, Integer attemptNumber) {
+        this.exerciseID = exerciseID;
         this.lesson = lesson;
         this.user = user;
         this.submittedAt = submittedAt;
@@ -74,12 +73,12 @@ public class ContestExerciseAttempt {
         return attemptID;
     }
 
-    public CodingExercise getExercise() {
-        return exercise;
+    public Long getExerciseID() {
+        return exerciseID;
     }
 
-    public void setExercise(CodingExercise exercise) {
-        this.exercise = exercise;
+    public void setExerciseID(Long exerciseID) {
+        this.exerciseID = exerciseID;
     }
 
     public CourseLesson getLesson() {
@@ -106,11 +105,11 @@ public class ContestExerciseAttempt {
         this.submittedAt = submittedAt;
     }
 
-    public Integer getScore() {
+    public Double getScore() {
         return score;
     }
 
-    public void setScore(Integer score) {
+    public void setScore(Double score) {
         this.score = score;
     }
 }

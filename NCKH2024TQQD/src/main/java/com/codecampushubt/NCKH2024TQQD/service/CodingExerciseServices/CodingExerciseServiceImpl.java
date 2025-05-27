@@ -42,4 +42,14 @@ public class CodingExerciseServiceImpl implements CodingExerciseService {
         return codingExerciseRepository.getExerciseEntityByID(exerciseID);
     }
 
+    @Override
+    public boolean isExerciseInContestLesson(Long exerciseID) {
+        return codingExerciseRepository.isExerciseInContestLesson(exerciseID);
+    }
+
+    @Override
+    public Long getLessonIDByExerciseID(Long exerciseID) {
+        return codingExerciseRepository.getLessonIDByExerciseID(exerciseID);
+    }
+
 }

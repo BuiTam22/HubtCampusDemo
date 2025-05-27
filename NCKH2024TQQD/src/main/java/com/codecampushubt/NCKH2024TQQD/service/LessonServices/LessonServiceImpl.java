@@ -16,6 +16,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class LessonServiceImpl implements LessonService{
@@ -62,6 +63,11 @@ public class LessonServiceImpl implements LessonService{
     @Override
     public EditLessonDTO getEditLessonDTO(Long moduleID, String theSlug) {
         return lessonRepository.getEditLessonDTO(moduleID, theSlug);
+    }
+
+    @Override
+    public Optional<CourseLesson> findById(Long id) {
+        return lessonRepository.findById(id);
     }
 
     public String generateUniqueSlug(String baseSlug) {

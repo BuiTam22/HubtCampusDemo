@@ -34,4 +34,20 @@ public interface CodingExerciseRepository extends JpaRepository<CodingExercise, 
     @Query("SELECT ce FROM CodingExercise ce WHERE ce.exerciseID = :exerciseID")
     CodingExercise getExerciseEntityByID(@Param("exerciseID") Long exerciseID);
 
+    // Kiểm tra xem CodingExercise có phải nằm trong contest không
+    @Query("""
+        SELECT ce.lesson.isContest 
+        FROM CodingExercise ce 
+        WHERE ce.exerciseID = :exerciseID
+        """)
+    boolean isExerciseInContestLesson(@Param("exerciseID") Long exerciseID);
+
+    // LẤY RA lessonID từ coding exerciseID
+    @Query("""
+        SELECT ce.lesson.lessonID 
+        FROM CodingExercise ce 
+        WHERE ce.exerciseID = :exerciseID
+    """)
+    Long getLessonIDByExerciseID(@Param("exerciseID") Long exerciseID);
+
 }
